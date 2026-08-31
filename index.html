@@ -1,556 +1,558 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AVERIN VENTURES PRIVATE LIMITED | For You. For Society.</title>
-
-    <meta name="description" content="AVERIN VENTURES PRIVATE LIMITED - A diversified Indian business enterprise focused on professional operations, business services, infrastructure, logistics and sustainable growth.">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #1f2937;
-            background: #ffffff;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #ffffff;
-            border-bottom: 1px solid #e5e7eb;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-        }
-
-        .navbar {
-            max-width: 1200px;
-            margin: auto;
-            padding: 18px 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 21px;
-            font-weight: 800;
-            color: #0b1f3a;
-            letter-spacing: 0.5px;
-        }
-
-        .logo span {
-            display: block;
-            font-size: 12px;
-            color: #2563eb;
-            letter-spacing: 2px;
-            margin-top: 2px;
-        }
-
-        nav {
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            color: #1f2937;
-            font-weight: 600;
-            font-size: 15px;
-        }
-
-        nav a:hover {
-            color: #2563eb;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 650px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: #ffffff;
-            background:
-                linear-gradient(rgba(5, 25, 55, 0.88), rgba(8, 50, 95, 0.88)),
-                url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80")
-                center/cover;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: auto;
-            padding: 80px 25px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            line-height: 1.15;
-            margin-bottom: 18px;
-            letter-spacing: 1px;
-        }
-
-        .tagline {
-            font-size: 25px;
-            font-weight: 600;
-            color: #dbeafe;
-            margin-bottom: 25px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            max-width: 760px;
-            margin: auto;
-            color: #e5e7eb;
-        }
-
-        .buttons {
-            margin-top: 35px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 13px 26px;
-            border-radius: 6px;
-            font-weight: 700;
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            background: #2563eb;
-            color: #ffffff;
-        }
-
-        .btn-primary:hover {
-            background: #1d4ed8;
-            transform: translateY(-2px);
-        }
-
-        .btn-light {
-            background: #ffffff;
-            color: #0b1f3a;
-        }
-
-        .btn-light:hover {
-            background: #e5e7eb;
-            transform: translateY(-2px);
-        }
-
-        section {
-            padding: 80px 20px;
-        }
-
-        .container {
-            max-width: 1150px;
-            margin: auto;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title h2 {
-            font-size: 34px;
-            color: #0b1f3a;
-            margin-bottom: 12px;
-        }
-
-        .section-title p {
-            max-width: 750px;
-            margin: auto;
-            color: #6b7280;
-        }
-
-        /* ABOUT */
-
-        .about {
-            background: #f8fafc;
-        }
-
-        .about-box {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .about-box h3 {
-            font-size: 28px;
-            color: #2563eb;
-            margin-bottom: 20px;
-        }
-
-        .about-box p {
-            color: #4b5563;
-            font-size: 17px;
-        }
-
-        /* SERVICES */
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .service-card {
-            padding: 30px 25px;
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            transition: 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 28px rgba(0,0,0,0.10);
-        }
-
-        .service-number {
-            font-size: 14px;
-            color: #2563eb;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .service-card h3 {
-            color: #0b1f3a;
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
-
-        .service-card p {
-            color: #6b7280;
-            font-size: 15px;
-        }
-
-        /* WHY US */
-
-        .why {
-            background: #f8fafc;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .feature {
-            background: white;
-            padding: 30px 20px;
-            text-align: center;
-            border-radius: 10px;
-            border: 1px solid #e5e7eb;
-        }
-
-        .feature-icon {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .feature h3 {
-            color: #0b1f3a;
-            margin-bottom: 10px;
-        }
-
-        .feature p {
-            color: #6b7280;
-            font-size: 14px;
-        }
-
-        /* VALUES */
-
-        .values {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 15px;
-        }
-
-        .value {
-            text-align: center;
-            padding: 25px 15px;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            background: white;
-        }
-
-        .value h3 {
-            color: #2563eb;
-            font-size: 17px;
-        }
-
-        /* SOCIETY */
-
-        .society {
-            background: #0b1f3a;
-            color: white;
-            text-align: center;
-        }
-
-        .society h2 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .tagline-large {
-            font-size: 24px;
-            color: #93c5fd;
-            font-weight: bold;
-            margin-bottom: 25px;
-        }
-
-        .society p {
-            max-width: 850px;
-            margin: auto;
-            color: #dbeafe;
-            font-size: 17px;
-        }
-
-        /* VISION */
-
-        .vision-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .vision-card {
-            padding: 35px;
-            border-radius: 10px;
-            background: #f8fafc;
-            border-left: 5px solid #2563eb;
-        }
-
-        .vision-card h3 {
-            color: #0b1f3a;
-            margin-bottom: 12px;
-            font-size: 25px;
-        }
-
-        .vision-card p {
-            color: #6b7280;
-        }
-
-        /* CONTACT */
-
-        .contact {
-            background: #f8fafc;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 40px;
-        }
-
-        .contact-info {
-            background: #0b1f3a;
-            color: white;
-            padding: 40px;
-            border-radius: 10px;
-        }
-
-        .contact-info h3 {
-            font-size: 26px;
-            margin-bottom: 20px;
-        }
-
-        .contact-info p {
-            margin-bottom: 15px;
-            color: #dbeafe;
-        }
-
-        .contact-info a {
-            color: #93c5fd;
-        }
-
-        .whatsapp {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 22px;
-            background: #25D366;
-            color: white !important;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-
-        .contact-form {
-            background: white;
-            padding: 35px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-        }
-
-        .form-group {
-            margin-bottom: 18px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #d1d5db;
-            border-radius: 5px;
-            font-size: 15px;
-        }
-
-        .form-group textarea {
-            min-height: 130px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 5px;
-            background: #2563eb;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .submit-btn:hover {
-            background: #1d4ed8;
-        }
-
-        /* FOOTER */
-
-        footer {
-            background: #061426;
-            color: white;
-            padding: 45px 20px 20px;
-        }
-
-        .footer-grid {
-            max-width: 1150px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 40px;
-        }
-
-        footer h3 {
-            margin-bottom: 15px;
-        }
-
-        footer p,
-        footer a {
-            color: #cbd5e1;
-            font-size: 14px;
-        }
-
-        footer a {
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        .footer-bottom {
-            max-width: 1150px;
-            margin: 35px auto 0;
-            padding-top: 20px;
-            border-top: 1px solid #1e293b;
-            text-align: center;
-            color: #94a3b8;
-            font-size: 13px;
-        }
-
-        @media (max-width: 900px) {
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .features {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .values {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 650px) {
-
-            .navbar {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav {
-                gap: 12px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            nav a {
-                font-size: 13px;
-            }
-
-            .hero {
-                min-height: 600px;
-            }
-
-            .hero h1 {
-                font-size: 34px;
-            }
-
-            .tagline {
-                font-size: 20px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            section {
-                padding: 60px 18px;
-            }
-
-            .section-title h2 {
-                font-size: 28px;
-            }
-
-            .services-grid,
-            .features,
-            .values,
-            .vision-grid,
-            .contact-grid,
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AVERIN VENTURES PRIVATE LIMITED | For You. For Society.</title>
+
+<meta name="description" content="AVERIN VENTURES PRIVATE LIMITED - A diversified Indian business enterprise focused on trading, logistics, manpower, infrastructure, hospitality, manufacturing, consultancy and digital business solutions.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+color:#1f2937;
+background:#fff;
+line-height:1.6
+}
+
+a{text-decoration:none}
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:#fff;
+border-bottom:1px solid #e5e7eb;
+box-shadow:0 2px 12px rgba(0,0,0,.06)
+}
+
+.navbar{
+max-width:1200px;
+margin:auto;
+padding:12px 25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+color:#0b1f3a
+}
+
+.brand-logo{
+width:58px;
+height:58px;
+object-fit:contain;
+display:block
+}
+
+.brand-text{
+display:flex;
+flex-direction:column;
+line-height:1.15
+}
+
+.brand-name{
+font-size:20px;
+font-weight:800;
+letter-spacing:.5px;
+color:#0b1f3a
+}
+
+.brand-subtitle{
+font-size:11px;
+color:#2563eb;
+letter-spacing:2px;
+font-weight:700;
+margin-top:4px
+}
+
+nav{
+display:flex;
+gap:25px;
+align-items:center
+}
+
+nav a{
+color:#1f2937;
+font-weight:600;
+font-size:15px;
+transition:.3s
+}
+
+nav a:hover{color:#2563eb}
+
+/* HERO */
+
+.hero{
+min-height:650px;
+display:flex;
+align-items:center;
+text-align:center;
+color:#fff;
+background:
+linear-gradient(rgba(5,25,55,.90),rgba(8,50,95,.90)),
+url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80")
+center/cover
+}
+
+.hero-content{
+max-width:900px;
+margin:auto;
+padding:80px 25px
+}
+
+.hero-logo{
+width:120px;
+height:120px;
+object-fit:contain;
+margin-bottom:25px;
+background:#fff;
+padding:10px;
+border-radius:15px;
+box-shadow:0 10px 35px rgba(0,0,0,.25)
+}
+
+.hero h1{
+font-size:48px;
+line-height:1.15;
+margin-bottom:18px;
+letter-spacing:1px
+}
+
+.tagline{
+font-size:25px;
+font-weight:600;
+color:#dbeafe;
+margin-bottom:25px
+}
+
+.hero p{
+font-size:18px;
+max-width:760px;
+margin:auto;
+color:#e5e7eb
+}
+
+.buttons{
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap
+}
+
+.btn{
+display:inline-block;
+padding:13px 26px;
+border-radius:6px;
+font-weight:700;
+transition:.3s
+}
+
+.btn-primary{
+background:#2563eb;
+color:#fff
+}
+
+.btn-primary:hover{
+background:#1d4ed8;
+transform:translateY(-2px)
+}
+
+.btn-light{
+background:#fff;
+color:#0b1f3a
+}
+
+.btn-light:hover{
+background:#e5e7eb;
+transform:translateY(-2px)
+}
+
+section{padding:80px 20px}
+
+.container{
+max-width:1150px;
+margin:auto
+}
+
+.section-title{
+text-align:center;
+margin-bottom:45px
+}
+
+.section-title h2{
+font-size:34px;
+color:#0b1f3a;
+margin-bottom:12px
+}
+
+.section-title p{
+max-width:750px;
+margin:auto;
+color:#6b7280
+}
+
+/* ABOUT */
+
+.about{background:#f8fafc}
+
+.about-box{
+max-width:900px;
+margin:auto;
+text-align:center
+}
+
+.about-box h3{
+font-size:28px;
+color:#2563eb;
+margin-bottom:20px
+}
+
+.about-box p{
+color:#4b5563;
+font-size:17px
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px
+}
+
+.service-card{
+padding:30px 25px;
+background:#fff;
+border:1px solid #e5e7eb;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+transition:.3s
+}
+
+.service-card:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 28px rgba(0,0,0,.10)
+}
+
+.service-number{
+font-size:14px;
+color:#2563eb;
+font-weight:bold;
+margin-bottom:10px
+}
+
+.service-card h3{
+color:#0b1f3a;
+font-size:20px;
+margin-bottom:12px
+}
+
+.service-card p{
+color:#6b7280;
+font-size:15px
+}
+
+/* WHY */
+
+.why{background:#f8fafc}
+
+.features{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px
+}
+
+.feature{
+background:#fff;
+padding:30px 20px;
+text-align:center;
+border-radius:10px;
+border:1px solid #e5e7eb
+}
+
+.feature-icon{
+font-size:32px;
+margin-bottom:15px
+}
+
+.feature h3{
+color:#0b1f3a;
+margin-bottom:10px
+}
+
+.feature p{
+color:#6b7280;
+font-size:14px
+}
+
+/* VISION */
+
+.vision-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px
+}
+
+.vision-card{
+padding:35px;
+border-radius:10px;
+background:#f8fafc;
+border-left:5px solid #2563eb
+}
+
+.vision-card h3{
+color:#0b1f3a;
+margin-bottom:12px;
+font-size:25px
+}
+
+.vision-card p{color:#6b7280}
+
+/* VALUES */
+
+.values{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:15px
+}
+
+.value{
+text-align:center;
+padding:25px 15px;
+border:1px solid #e5e7eb;
+border-radius:8px;
+background:#fff
+}
+
+.value h3{
+color:#2563eb;
+font-size:17px
+}
+
+/* SOCIETY */
+
+.society{
+background:#0b1f3a;
+color:#fff;
+text-align:center
+}
+
+.society h2{
+font-size:38px;
+margin-bottom:15px
+}
+
+.tagline-large{
+font-size:24px;
+color:#93c5fd;
+font-weight:bold;
+margin-bottom:25px
+}
+
+.society p{
+max-width:850px;
+margin:auto;
+color:#dbeafe;
+font-size:17px
+}
+
+/* CONTACT */
+
+.contact{background:#f8fafc}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1.2fr;
+gap:40px
+}
+
+.contact-info{
+background:#0b1f3a;
+color:#fff;
+padding:40px;
+border-radius:10px
+}
+
+.contact-info h3{
+font-size:26px;
+margin-bottom:20px
+}
+
+.contact-info p{
+margin-bottom:15px;
+color:#dbeafe
+}
+
+.contact-info a{color:#93c5fd}
+
+.whatsapp{
+display:inline-block;
+margin-top:15px;
+padding:12px 22px;
+background:#25D366;
+color:#fff!important;
+border-radius:6px;
+font-weight:bold
+}
+
+.contact-form{
+background:#fff;
+padding:35px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.06)
+}
+
+.form-group{margin-bottom:18px}
+
+.form-group label{
+display:block;
+font-weight:600;
+margin-bottom:6px
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+width:100%;
+padding:12px;
+border:1px solid #d1d5db;
+border-radius:5px;
+font-size:15px
+}
+
+.form-group textarea{
+min-height:130px;
+resize:vertical
+}
+
+.submit-btn{
+width:100%;
+padding:14px;
+border:none;
+border-radius:5px;
+background:#2563eb;
+color:#fff;
+font-size:16px;
+font-weight:bold;
+cursor:pointer
+}
+
+.submit-btn:hover{background:#1d4ed8}
+
+/* FOOTER */
+
+footer{
+background:#061426;
+color:#fff;
+padding:45px 20px 20px
+}
+
+.footer-grid{
+max-width:1150px;
+margin:auto;
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:40px
+}
+
+footer h3{margin-bottom:15px}
+
+footer p,
+footer a{
+color:#cbd5e1;
+font-size:14px
+}
+
+footer a{
+display:block;
+margin-bottom:8px
+}
+
+.footer-bottom{
+max-width:1150px;
+margin:35px auto 0;
+padding-top:20px;
+border-top:1px solid #1e293b;
+text-align:center;
+color:#94a3b8;
+font-size:13px
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.services-grid{grid-template-columns:repeat(2,1fr)}
+
+.features{grid-template-columns:repeat(2,1fr)}
+
+.values{grid-template-columns:repeat(2,1fr)}
+
+.footer-grid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:650px){
+
+.navbar{
+flex-direction:column;
+gap:12px;
+padding:12px 15px
+}
+
+.brand-logo{
+width:50px;
+height:50px
+}
+
+.brand-name{font-size:17px}
+
+.brand-subtitle{font-size:9px}
+
+nav{
+gap:12px;
+flex-wrap:wrap;
+justify-content:center
+}
+
+nav a{font-size:13px}
+
+.hero{min-height:600px}
+
+.hero-logo{
+width:90px;
+height:90px
+}
+
+.hero h1{font-size:34px}
+
+.tagline{font-size:20px}
+
+.hero p{font-size:16px}
+
+section{padding:60px 18px}
+
+.section-title h2{font-size:28px}
+
+.services-grid,
+.features,
+.values,
+.vision-grid,
+.contact-grid,
+.footer-grid{
+grid-template-columns:1fr
+}
+}
+</style>
 </head>
 
 <body>
@@ -558,22 +560,37 @@
 <!-- HEADER -->
 
 <header>
-    <div class="navbar">
+<div class="navbar">
 
-        <div class="logo">
-            AVERIN VENTURES
-            <span>PRIVATE LIMITED</span>
-        </div>
+<a href="#home" class="brand">
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#values">Values</a>
-            <a href="#contact">Contact</a>
-        </nav>
+<img src="logo.png"
+alt="AVERIN VENTURES PRIVATE LIMITED Logo"
+class="brand-logo">
 
-    </div>
+<div class="brand-text">
+
+<div class="brand-name">
+AVERIN VENTURES
+</div>
+
+<div class="brand-subtitle">
+PRIVATE LIMITED
+</div>
+
+</div>
+
+</a>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#services">Services</a>
+<a href="#values">Values</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
 </header>
 
 
@@ -581,34 +598,40 @@
 
 <section class="hero" id="home">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <h1>AVERIN VENTURES<br>PRIVATE LIMITED</h1>
+<img src="logo.png"
+alt="AVERIN VENTURES PRIVATE LIMITED"
+class="hero-logo">
 
-        <div class="tagline">
-            For You. For Society.
-        </div>
+<h1>
+AVERIN VENTURES<br>
+PRIVATE LIMITED
+</h1>
 
-        <p>
-            A professionally managed and growth-oriented business enterprise
-            engaged in diverse commercial, operational and business support
-            activities across multiple sectors.
-        </p>
+<div class="tagline">
+For You. For Society.
+</div>
 
-        <div class="buttons">
+<p>
+A professionally managed and growth-oriented business enterprise
+engaged in diverse commercial, operational and business support
+activities across multiple sectors.
+</p>
 
-            <a href="#services" class="btn btn-primary">
-                Explore Our Services
-            </a>
+<div class="buttons">
 
-            <a href="#contact" class="btn btn-light">
-                Contact Us
-            </a>
+<a href="#services" class="btn btn-primary">
+Explore Our Services
+</a>
 
-        </div>
+<a href="#contact" class="btn btn-light">
+Contact Us
+</a>
 
-    </div>
+</div>
 
+</div>
 </section>
 
 
@@ -616,46 +639,46 @@
 
 <section class="about" id="about">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
-            <h2>About Us</h2>
+<div class="section-title">
+<h2>About Us</h2>
 
-            <p>
-                Building a professional, reliable and sustainable business platform.
-            </p>
-        </div>
+<p>
+Building a professional, reliable and sustainable business platform.
+</p>
+</div>
 
-        <div class="about-box">
+<div class="about-box">
 
-            <h3>Building Opportunities. Creating Value.</h3>
+<h3>
+Building Opportunities. Creating Value.
+</h3>
 
-            <p>
-                AVERIN VENTURES PRIVATE LIMITED aims to build a diversified
-                and sustainable business platform by delivering reliable
-                products, services and operational solutions.
-            </p>
+<p>
+AVERIN VENTURES PRIVATE LIMITED aims to build a diversified
+and sustainable business platform by delivering reliable
+products, services and operational solutions.
+</p>
 
-            <br>
+<br>
 
-            <p>
-                Our approach is based on professionalism, responsible
-                operations, quality execution and long-term business
-                relationships.
-            </p>
+<p>
+Our approach is based on professionalism, responsible
+operations, quality execution and long-term business
+relationships.
+</p>
 
-            <br>
+<br>
 
-            <p>
-                We aim to create value not only for our clients and business
-                partners, but also through responsible participation in
-                society and economic development.
-            </p>
+<p>
+We aim to create value not only for our clients and business
+partners, but also through responsible participation in
+society and economic development.
+</p>
 
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
 
 
@@ -663,155 +686,123 @@
 
 <section id="services">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-title">
 
-            <h2>Our Business Areas</h2>
+<h2>Our Business Areas</h2>
 
-            <p>
-                Diverse business capabilities designed to support clients,
-                partners and operational requirements.
-            </p>
+<p>
+Diverse business capabilities designed to support clients,
+partners and operational requirements.
+</p>
 
-        </div>
+</div>
 
+<div class="services-grid">
 
-        <div class="services-grid">
+<div class="service-card">
+<div class="service-number">01</div>
+<h3>Trading & Distribution</h3>
+<p>
+Procurement, sourcing, wholesale, retail, distribution
+and supply of lawful products and materials.
+</p>
+</div>
 
-            <div class="service-card">
-                <div class="service-number">01</div>
+<div class="service-card">
+<div class="service-number">02</div>
+<h3>Transport & Logistics</h3>
+<p>
+Transportation, logistics, delivery, fleet coordination,
+warehousing and supply-chain support.
+</p>
+</div>
 
-                <h3>Trading & Distribution</h3>
+<div class="service-card">
+<div class="service-number">03</div>
+<h3>Manpower & Staffing</h3>
+<p>
+Manpower supply, staffing, recruitment, workforce
+management and operational support services.
+</p>
+</div>
 
-                <p>
-                    Procurement, sourcing, wholesale, retail, distribution
-                    and supply of lawful products and materials.
-                </p>
-            </div>
+<div class="service-card">
+<div class="service-number">04</div>
+<h3>Construction & Infrastructure</h3>
+<p>
+Construction, civil works, project execution,
+maintenance and infrastructure-related services.
+</p>
+</div>
 
+<div class="service-card">
+<div class="service-number">05</div>
+<h3>Hospitality & Tourism</h3>
+<p>
+Hotel, resort, restaurant, guest-house, hospitality
+management and allied services.
+</p>
+</div>
 
-            <div class="service-card">
-                <div class="service-number">02</div>
+<div class="service-card">
+<div class="service-number">06</div>
+<h3>Manufacturing & Processing</h3>
+<p>
+Manufacturing, processing, fabrication, assembly
+and packaging activities.
+</p>
+</div>
 
-                <h3>Transport & Logistics</h3>
+<div class="service-card">
+<div class="service-number">07</div>
+<h3>Agriculture & Food Processing</h3>
+<p>
+Agricultural, agro-based, food-processing and allied
+commercial activities.
+</p>
+</div>
 
-                <p>
-                    Transportation, logistics, delivery, fleet coordination,
-                    warehousing and supply-chain support.
-                </p>
-            </div>
+<div class="service-card">
+<div class="service-number">08</div>
+<h3>Consultancy & Business Services</h3>
+<p>
+Business, management, operational, project and
+commercial consultancy services.
+</p>
+</div>
 
+<div class="service-card">
+<div class="service-number">09</div>
+<h3>IT & Digital Services</h3>
+<p>
+Websites, software, digital platforms, automation
+and technology-enabled business solutions.
+</p>
+</div>
 
-            <div class="service-card">
-                <div class="service-number">03</div>
+<div class="service-card">
+<div class="service-number">10</div>
+<h3>Import & Export</h3>
+<p>
+International sourcing, procurement, trading,
+distribution and other lawful cross-border
+business activities.
+</p>
+</div>
 
-                <h3>Manpower & Staffing</h3>
+</div>
 
-                <p>
-                    Manpower supply, staffing, recruitment, workforce
-                    management and operational support services.
-                </p>
-            </div>
+<div style="text-align:center;margin-top:40px">
 
+<a href="#contact" class="btn btn-primary">
+Make an Enquiry
+</a>
 
-            <div class="service-card">
-                <div class="service-number">04</div>
+</div>
 
-                <h3>Construction & Infrastructure</h3>
-
-                <p>
-                    Construction, civil works, project execution,
-                    maintenance and infrastructure-related services.
-                </p>
-            </div>
-
-
-            <div class="service-card">
-                <div class="service-number">05</div>
-
-                <h3>Hospitality & Tourism</h3>
-
-                <p>
-                    Hotel, resort, restaurant, guest-house, hospitality
-                    management and allied services.
-                </p>
-            </div>
-
-
-            <div class="service-card">
-                <div class="service-number">06</div>
-
-                <h3>Manufacturing & Processing</h3>
-
-                <p>
-                    Manufacturing, processing, fabrication, assembly
-                    and packaging activities.
-                </p>
-            </div>
-
-
-            <div class="service-card">
-                <div class="service-number">07</div>
-
-                <h3>Agriculture & Food Processing</h3>
-
-                <p>
-                    Agricultural, agro-based, food-processing and allied
-                    commercial activities.
-                </p>
-            </div>
-
-
-            <div class="service-card">
-                <div class="service-number">08</div>
-
-                <h3>Consultancy & Business Services</h3>
-
-                <p>
-                    Business, management, operational, project and
-                    commercial consultancy services.
-                </p>
-            </div>
-
-
-            <div class="service-card">
-                <div class="service-number">09</div>
-
-                <h3>IT & Digital Services</h3>
-
-                <p>
-                    Websites, software, digital platforms, automation
-                    and technology-enabled business solutions.
-                </p>
-            </div>
-
-
-            <div class="service-card">
-                <div class="service-number">10</div>
-
-                <h3>Import & Export</h3>
-
-                <p>
-                    International sourcing, procurement, trading,
-                    distribution and other lawful cross-border
-                    business activities.
-                </p>
-            </div>
-
-        </div>
-
-
-        <div style="text-align:center; margin-top:40px;">
-
-            <a href="#contact" class="btn btn-primary">
-                Make an Enquiry
-            </a>
-
-        </div>
-
-    </div>
-
+</div>
 </section>
 
 
@@ -819,76 +810,52 @@
 
 <section class="why">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-title">
+<h2>Why Choose AVERIN VENTURES</h2>
+</div>
 
-            <h2>Why Choose AVERIN VENTURES</h2>
+<div class="features">
 
-        </div>
+<div class="feature">
+<div class="feature-icon">◆</div>
+<h3>Professional Operations</h3>
+<p>
+Systematic planning, efficient execution and responsible
+business operations.
+</p>
+</div>
 
+<div class="feature">
+<div class="feature-icon">✓</div>
+<h3>Quality & Reliability</h3>
+<p>
+A strong focus on dependable service, quality execution
+and professional standards.
+</p>
+</div>
 
-        <div class="features">
+<div class="feature">
+<div class="feature-icon">◎</div>
+<h3>Client-Focused Approach</h3>
+<p>
+Understanding requirements and providing practical and
+reliable business solutions.
+</p>
+</div>
 
-            <div class="feature">
+<div class="feature">
+<div class="feature-icon">↗</div>
+<h3>Sustainable Growth</h3>
+<p>
+Building long-term relationships and expanding
+responsibly across business sectors.
+</p>
+</div>
 
-                <div class="feature-icon">◆</div>
-
-                <h3>Professional Operations</h3>
-
-                <p>
-                    Systematic planning, efficient execution and responsible
-                    business operations.
-                </p>
-
-            </div>
-
-
-            <div class="feature">
-
-                <div class="feature-icon">✓</div>
-
-                <h3>Quality & Reliability</h3>
-
-                <p>
-                    A strong focus on dependable service, quality execution
-                    and professional standards.
-                </p>
-
-            </div>
-
-
-            <div class="feature">
-
-                <div class="feature-icon">◎</div>
-
-                <h3>Client-Focused Approach</h3>
-
-                <p>
-                    Understanding requirements and providing practical and
-                    reliable business solutions.
-                </p>
-
-            </div>
-
-
-            <div class="feature">
-
-                <div class="feature-icon">↗</div>
-
-                <h3>Sustainable Growth</h3>
-
-                <p>
-                    Building long-term relationships and expanding
-                    responsibly across business sectors.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
 
 
@@ -896,47 +863,41 @@
 
 <section>
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-title">
+<h2>Our Vision & Mission</h2>
+</div>
 
-            <h2>Our Vision & Mission</h2>
+<div class="vision-grid">
 
-        </div>
+<div class="vision-card">
 
+<h3>Our Vision</h3>
 
-        <div class="vision-grid">
+<p>
+To build a professionally managed and diversified
+enterprise that creates sustainable value for customers,
+business partners, employees and society.
+</p>
 
-            <div class="vision-card">
+</div>
 
-                <h3>Our Vision</h3>
+<div class="vision-card">
 
-                <p>
-                    To build a professionally managed and diversified
-                    enterprise that creates sustainable value for customers,
-                    business partners, employees and society.
-                </p>
+<h3>Our Mission</h3>
 
-            </div>
+<p>
+To deliver reliable services and business solutions
+through professional management, efficient operations,
+quality execution, innovation and responsible business
+practices.
+</p>
 
+</div>
 
-            <div class="vision-card">
-
-                <h3>Our Mission</h3>
-
-                <p>
-                    To deliver reliable services and business solutions
-                    through professional management, efficient operations,
-                    quality execution, innovation and responsible business
-                    practices.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
 
 
@@ -944,41 +905,26 @@
 
 <section id="values" class="about">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-title">
+<h2>Our Values</h2>
+</div>
 
-            <h2>Our Values</h2>
+<div class="values">
 
-        </div>
+<div class="value"><h3>Integrity</h3></div>
 
+<div class="value"><h3>Professionalism</h3></div>
 
-        <div class="values">
+<div class="value"><h3>Reliability</h3></div>
 
-            <div class="value">
-                <h3>Integrity</h3>
-            </div>
+<div class="value"><h3>Innovation</h3></div>
 
-            <div class="value">
-                <h3>Professionalism</h3>
-            </div>
+<div class="value"><h3>Responsibility</h3></div>
 
-            <div class="value">
-                <h3>Reliability</h3>
-            </div>
-
-            <div class="value">
-                <h3>Innovation</h3>
-            </div>
-
-            <div class="value">
-                <h3>Responsibility</h3>
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
 
 
@@ -986,30 +932,29 @@
 
 <section class="society">
 
-    <div class="container">
+<div class="container">
 
-        <h2>For You. For Society.</h2>
+<h2>For You. For Society.</h2>
 
-        <div class="tagline-large">
-            Business Growth With Responsibility
-        </div>
+<div class="tagline-large">
+Business Growth With Responsibility
+</div>
 
-        <p>
-            We believe that sustainable business growth goes hand in hand
-            with creating opportunities and contributing positively to society.
-        </p>
+<p>
+We believe that sustainable business growth goes hand in hand
+with creating opportunities and contributing positively to society.
+</p>
 
-        <br>
+<br>
 
-        <p>
-            Our long-term vision is to build business operations that generate
-            value for customers, create employment and partnership opportunities,
-            support economic activity and contribute responsibly to the
-            communities in which we operate.
-        </p>
+<p>
+Our long-term vision is to build business operations that generate
+value for customers, create employment and partnership opportunities,
+support economic activity and contribute responsibly to the
+communities in which we operate.
+</p>
 
-    </div>
-
+</div>
 </section>
 
 
@@ -1017,154 +962,183 @@
 
 <section class="contact" id="contact">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-title">
 
-            <h2>Contact Us</h2>
+<h2>Contact Us</h2>
 
-            <p>
-                Connect with AVERIN VENTURES PRIVATE LIMITED for business
-                enquiries and opportunities.
-            </p>
+<p>
+Connect with AVERIN VENTURES PRIVATE LIMITED for business
+enquiries and opportunities.
+</p>
 
-        </div>
+</div>
 
-
-        <div class="contact-grid">
-
-
-            <div class="contact-info">
-
-                <h3>
-                    AVERIN VENTURES<br>
-                    PRIVATE LIMITED
-                </h3>
+<div class="contact-grid">
 
 
-                <p>
-                    <strong>Tagline:</strong><br>
-                    For You. For Society.
-                </p>
+<!-- CONTACT INFORMATION -->
+
+<div class="contact-info">
+
+<h3>
+AVERIN VENTURES<br>
+PRIVATE LIMITED
+</h3>
+
+<p>
+<strong>Tagline:</strong><br>
+For You. For Society.
+</p>
+
+<p>
+<strong>WhatsApp / Phone:</strong><br>
+
+<a href="tel:+917398753008">
++91 7398753008
+</a>
+
+</p>
+
+<p>
+<strong>Registered Office:</strong><br>
+
+11/70 Shahid Path Behsa,<br>
+Lucknow, Uttar Pradesh - 226023,<br>
+India
+</p>
+
+<a
+class="whatsapp"
+href="https://wa.me/917398753008?text=Hello%20AVERIN%20VENTURES%2C%20I%20would%20like%20to%20make%20a%20business%20enquiry."
+target="_blank">
+
+WhatsApp Us
+
+</a>
+
+</div>
 
 
-                <p>
-                    <strong>Phone:</strong><br>
+<!-- ENQUIRY FORM -->
 
-                    <a href="tel:+919648361634">
-                        +91 9648361634
-                    </a>
-                </p>
+<div class="contact-form">
 
+<form
+action="https://formspree.io/f/YOUR_FORM_ID"
+method="POST">
 
-                <p>
-                    <strong>Registered Office:</strong><br>
+<div class="form-group">
 
-                    11/70 Shahid Path Behsa,<br>
-                    Lucknow, Uttar Pradesh - 226023,<br>
-                    India
-                </p>
+<label>Full Name</label>
 
+<input
+type="text"
+name="name"
+placeholder="Enter your full name"
+required>
 
-                <a
-                    class="whatsapp"
-                    href="https://wa.me/919648361634"
-                    target="_blank">
-                    WhatsApp Us
-                </a>
-
-            </div>
+</div>
 
 
-            <div class="contact-form">
+<div class="form-group">
 
-                <form
-                    action="mailto:YOUR-EMAIL@example.com"
-                    method="post"
-                    enctype="text/plain">
+<label>Company / Organization</label>
 
-                    <div class="form-group">
+<input
+type="text"
+name="company"
+placeholder="Company or organization name">
 
-                        <label>Full Name</label>
-
-                        <input
-                            type="text"
-                            name="Full Name"
-                            required>
-
-                    </div>
+</div>
 
 
-                    <div class="form-group">
+<div class="form-group">
 
-                        <label>Company / Organization</label>
+<label>Phone Number</label>
 
-                        <input
-                            type="text"
-                            name="Company">
+<input
+type="tel"
+name="phone"
+placeholder="Enter phone number"
+required>
 
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>Phone Number</label>
-
-                        <input
-                            type="tel"
-                            name="Phone">
-
-                    </div>
+</div>
 
 
-                    <div class="form-group">
+<div class="form-group">
 
-                        <label>Email Address</label>
+<label>Email Address</label>
 
-                        <input
-                            type="email"
-                            name="Email"
-                            required>
+<input
+type="email"
+name="email"
+placeholder="Enter email address"
+required>
 
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>Business Requirement</label>
-
-                        <input
-                            type="text"
-                            name="Business Requirement">
-
-                    </div>
+</div>
 
 
-                    <div class="form-group">
+<div class="form-group">
 
-                        <label>Message</label>
+<label>Business Requirement</label>
 
-                        <textarea name="Message"></textarea>
+<select name="requirement" required>
 
-                    </div>
+<option value="">
+Select a business area
+</option>
+
+<option>Trading & Distribution</option>
+<option>Transport & Logistics</option>
+<option>Manpower & Staffing</option>
+<option>Construction & Infrastructure</option>
+<option>Hospitality & Tourism</option>
+<option>Manufacturing & Processing</option>
+<option>Agriculture & Food Processing</option>
+<option>Consultancy & Business Services</option>
+<option>IT & Digital Services</option>
+<option>Import & Export</option>
+<option>Other</option>
+
+</select>
+
+</div>
 
 
-                    <button
-                        type="submit"
-                        class="submit-btn">
+<div class="form-group">
 
-                        Submit Enquiry
+<label>Message</label>
 
-                    </button>
+<textarea
+name="message"
+placeholder="Tell us about your requirement"
+required></textarea>
 
-                </form>
+</div>
 
-            </div>
 
-        </div>
+<input
+type="hidden"
+name="_subject"
+value="New Business Enquiry - AVERIN VENTURES PRIVATE LIMITED">
 
-    </div>
 
+<button
+type="submit"
+class="submit-btn">
+
+Submit Business Enquiry
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+</div>
 </section>
 
 
@@ -1172,76 +1146,76 @@
 
 <footer>
 
-    <div class="footer-grid">
+<div class="footer-grid">
+
+<div>
+
+<h3>
+AVERIN VENTURES PRIVATE LIMITED
+</h3>
+
+<p>
+For You. For Society.
+</p>
+
+<br>
+
+<p>
+A diversified business enterprise focused on professional
+operations, reliable services and sustainable growth.
+</p>
+
+</div>
 
 
-        <div>
+<div>
 
-            <h3>
-                AVERIN VENTURES PRIVATE LIMITED
-            </h3>
+<h3>Quick Links</h3>
 
-            <p>
-                For You. For Society.
-            </p>
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#services">Our Services</a>
+<a href="#values">Our Values</a>
+<a href="#contact">Contact Us</a>
 
-            <br>
-
-            <p>
-                A diversified business enterprise focused on professional
-                operations, reliable services and sustainable growth.
-            </p>
-
-        </div>
+</div>
 
 
-        <div>
+<div>
 
-            <h3>Quick Links</h3>
+<h3>Contact</h3>
 
-            <a href="#home">Home</a>
+<a href="tel:+917398753008">
++91 7398753008
+</a>
 
-            <a href="#about">About Us</a>
+<a href="https://wa.me/917398753008" target="_blank">
+WhatsApp
+</a>
 
-            <a href="#services">Our Services</a>
+</div>
 
-            <a href="#contact">Contact Us</a>
-
-        </div>
-
-
-        <div>
-
-            <h3>Legal</h3>
-
-            <a href="#">Privacy Policy</a>
-
-            <a href="#">Terms & Conditions</a>
-
-        </div>
-
-    </div>
+</div>
 
 
-    <div class="footer-bottom">
+<div class="footer-bottom">
 
-        <p>
-            AVERIN VENTURES PRIVATE LIMITED shall undertake business
-            activities subject to applicable laws, licences, registrations,
-            approvals, permits and statutory requirements.
-        </p>
+<p>
+AVERIN VENTURES PRIVATE LIMITED shall undertake business
+activities subject to applicable laws, licences, registrations,
+approvals, permits and statutory requirements.
+</p>
 
-        <br>
+<br>
 
-        <p>
-            © 2026 AVERIN VENTURES PRIVATE LIMITED.
-            All Rights Reserved.
-        </p>
+<p>
+© 2026 AVERIN VENTURES PRIVATE LIMITED.
+All Rights Reserved.
+</p>
 
-    </div>
+</div>
 
 </footer>
 
 </body>
 </html>
-```
