@@ -1,0 +1,39 @@
+AVERIN VENTURES PRIVATE LIMITED — WEBSITE VERSION 2
+=====================================================
+
+CONTACT
+Email: averinvetures@gmail.com
+Phone / WhatsApp: +91 9648361634
+Google Enquiry Form: https://forms.gle/oPNrf4G7nBAehnNn6
+
+VERSION 2 FEATURES
+• Corporate MNC-style navigation
+• Dedicated business pages for every existing sector
+• Dedicated Pharmaceutical & Healthcare page
+• Business Partnership / Distributor / Vendor / Career enquiry CTAs
+• Google Form integration
+• Native website enquiry form
+• Google Sheets + Email CRM-ready integration
+• Automatic acknowledgement email
+• WhatsApp business CTA
+• Mobile responsive layout
+• SEO-friendly page titles and descriptions
+• Footer navigation and legal/compliance note
+
+GOOGLE SHEETS + EMAIL ACTIVATION
+1. Create/open a Google Sheet.
+2. Extensions → Apps Script.
+3. Paste google-apps-script.gs.
+4. Save → Deploy → New deployment → Web app.
+5. Execute as: Me.
+6. Who has access: Anyone.
+7. Copy the /exec Web App URL.
+8. Open assets/form.js and replace:
+   PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE
+   with your /exec URL.
+9. Upload the complete folder to GitHub Pages.
+
+IMPORTANT
+• The Google Form is already linked as the fallback/primary enquiry route until the Apps Script URL is connected.
+• The email address is used exactly as supplied: averinvetures@gmail.com
+• Replace the email in future only if you intentionally want a different mailbox.
