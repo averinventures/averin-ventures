@@ -1,448 +1,526 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Professional Multi-Section Website with Contact Modal</title>
-  
-  <!-- FontAwesome Icons for Professional Look -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<meta name="google-site-verification" content="lGhGd2EZW5qMOWC_JAVKwKi5grlxqH82_09WrEpLRak" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVERIN VENTURES PRIVATE LIMITED | AVERIN PHARMACEUTICALS</title>
+<meta name="description" content="AVERIN VENTURES PRIVATE LIMITED - A diversified Indian MNC business enterprise across Pharmaceuticals, Trading, Logistics, Manpower, Infrastructure, Hospitality, Manufacturing, Agriculture, Consultancy and IT.">
 
-  <style>
-    /* ==========================================
-       1. GLOBAL & RESET STYLES
-       ========================================== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html {
-      scroll-behavior: smooth;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
-    body {
-      color: #f8fafc;
-      overflow-x: hidden;
-    }
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    /* ==========================================
-       2. NAVBAR STYLES
-       ========================================== */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 8%;
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(12px);
-      z-index: 100;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .nav-logo img {
-      height: 40px;
-      vertical-align: middle;
-    }
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 30px;
-    }
-    .nav-links a {
-      color: #cbd5e1;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 15px;
-      transition: color 0.3s;
-    }
-    .nav-links a:hover {
-      color: #38bdf8;
-    }
-    .nav-contact-btn {
-      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-      color: #ffffff;
-      padding: 10px 22px;
-      border: none;
-      border-radius: 50px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .nav-contact-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#1f2937;background:#fff;line-height:1.6}
+a{text-decoration:none}
 
-    /* ==========================================
-       3. SECTION COMMON STYLES
-       ========================================== */
-    section {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 100px 8% 60px;
-      text-align: center;
-    }
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      background: linear-gradient(to right, #ffffff, #cbd5e1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .section-desc {
-      font-size: 1.125rem;
-      color: #94a3b8;
-      max-width: 650px;
-      margin-bottom: 40px;
-      line-height: 1.6;
-    }
+/* STICKY HEADER WITH LOGO AND COMPANY NAME */
+header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #e5e7eb;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.navbar{max-width:1250px;margin:auto;padding:12px 25px;display:flex;justify-content:space-between;align-items:center;gap:20px}
 
-    /* ==========================================
-       4. INDIVIDUAL SECTION COLORS (DIFFERENT BACKGROUNDS)
-       ========================================== */
-    
-    /* Section 1: Hero - Midnight Deep Blue */
-    #hero {
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-    }
+.brand{display:flex;align-items:center;gap:12px;color:#0b1f3a;cursor:pointer}
+.brand-logo-box{width:50px;height:50px;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;box-shadow:0 4px 10px rgba(37,99,235,0.3)}
+.brand-logo-img{width:50px;height:50px;object-fit:contain;display:block}
 
-    /* Section 2: Services - Rich Emerald Dark */
-    #services {
-      background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
-    }
+.brand-text{display:flex;flex-direction:column;line-height:1.15}
+.brand-name{font-size:20px;font-weight:800;letter-spacing:.5px;color:#0b1f3a}
+.brand-subtitle{font-size:11px;color:#2563eb;letter-spacing:2px;font-weight:700;margin-top:3px}
 
-    /* Section 3: About Us - Deep Purple Indigo */
-    #about {
-      background: linear-gradient(135deg, #31104b 0%, #18052b 100%);
-    }
+nav{display:flex;gap:22px;align-items:center}
+nav a{color:#1f2937;font-weight:600;font-size:15px;transition:.3s;cursor:pointer}
+nav a:hover{color:#2563eb}
 
-    /* Section 4: Contact - Slate Charcoal Modern */
-    #contact {
-      background: linear-gradient(135deg, #18181b 0%, #09090b 100%);
-    }
+.page{display:none}
+.page.active{display:block;animation:fadeIn 0.3s ease-in-out}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-    /* ==========================================
-       5. CONTENT CARDS & BUTTONS
-       ========================================== */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      width: 100%;
-      max-width: 1100px;
-    }
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      border-radius: 16px;
-      backdrop-filter: blur(10px);
-      transition: transform 0.3s, border-color 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(255, 255, 255, 0.3);
-    }
-    .card i {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      color: #38bdf8;
-    }
-    .card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-    }
-    .card p {
-      color: #94a3b8;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
+/* HERO SECTION WITH ORIGINAL BACKGROUND */
+.hero{min-height:650px;display:flex;align-items:center;text-align:center;color:#fff;background:linear-gradient(rgba(5,25,55,.88),rgba(8,50,95,.90)),url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80") center/cover}
+.hero-content{max-width:920px;margin:auto;padding:80px 25px}
+.hero-logo-icon{width:90px;height:90px;background:#fff;color:#2563eb;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:42px;margin:0 auto 20px;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+.hero h1{font-size:46px;line-height:1.15;margin-bottom:18px;letter-spacing:1px;font-weight:800}
+.tagline{font-size:24px;font-weight:600;color:#dbeafe;margin-bottom:25px}
+.hero p{font-size:18px;max-width:780px;margin:auto;color:#e5e7eb}
+.buttons{margin-top:35px;display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
 
-    .action-btn {
-      background: linear-gradient(135deg, #06b6d4, #3b82f6);
-      color: white;
-      padding: 14px 36px;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
-      transition: all 0.3s;
-    }
-    .action-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 15px 30px rgba(6, 182, 212, 0.5);
-    }
+.btn{display:inline-block;padding:13px 26px;border-radius:6px;font-weight:700;transition:.3s;cursor:pointer;border:none}
+.btn-primary{background:#2563eb;color:#fff}
+.btn-primary:hover{background:#1d4ed8;transform:translateY(-2px)}
+.btn-light{background:#fff;color:#0b1f3a}
+.btn-light:hover{background:#e5e7eb;transform:translateY(-2px)}
 
-    /* ==========================================
-       6. MODAL (POP-UP FORM WITH LOGO & GLASS EFFECT)
-       ========================================== */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      align-items: center;
-      justify-content: center;
-    }
+section{padding:80px 20px}
+.container{max-width:1150px;margin:auto}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:34px;color:#0b1f3a;margin-bottom:12px}
+.section-title p{max-width:750px;margin:auto;color:#6b7280}
 
-    .modal-box {
-      background: #ffffff;
-      color: #0f172a;
-      width: 90%;
-      max-width: 450px;
-      padding: 35px;
-      border-radius: 20px;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-      position: relative;
-      animation: modalSlide 0.35s ease-out;
-    }
+.about{background:#f8fafc}
+.about-box{max-width:900px;margin:auto;text-align:center}
+.about-box h3{font-size:28px;color:#2563eb;margin-bottom:20px}
+.about-box p{color:#4b5563;font-size:17px}
 
-    @keyframes modalSlide {
-      from { opacity: 0; transform: translateY(-30px) scale(0.95); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
+/* SERVICES GRID */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.service-card{padding:30px 25px;background:#fff;border:1px solid #e5e7eb;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.05);transition:.3s;cursor:pointer}
+.service-card:hover{transform:translateY(-5px);box-shadow:0 12px 28px rgba(0,0,0,.10);border-color:#2563eb}
+.service-icon{font-size:32px;color:#2563eb;margin-bottom:12px}
+.service-card h3{color:#0b1f3a;font-size:20px;margin-bottom:12px}
+.service-card p{color:#6b7280;font-size:15px;margin-bottom:15px}
+.view-more-link{color:#2563eb;font-weight:bold;font-size:14px;display:inline-block}
 
-    .close-btn {
-      position: absolute;
-      top: 18px;
-      right: 22px;
-      font-size: 24px;
-      color: #64748b;
-      cursor: pointer;
-      transition: color 0.2s;
-    }
-    .close-btn:hover { color: #0f172a; }
+/* WHY / VISION / VALUES / SOCIETY */
+.why{background:#f8fafc}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feature{background:#fff;padding:30px 20px;text-align:center;border-radius:10px;border:1px solid #e5e7eb}
+.feature-icon{font-size:32px;margin-bottom:15px}
+.feature h3{color:#0b1f3a;margin-bottom:10px}
+.feature p{color:#6b7280;font-size:14px}
 
-    /* Logo Styling Inside Modal */
-    .modal-logo-header {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-    .modal-logo-header img {
-      max-width: 140px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-    .modal-logo-header h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #0f172a;
-    }
-    .modal-logo-header p {
-      font-size: 0.875rem;
-      color: #64748b;
-      margin-top: 4px;
-    }
+.vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.vision-card{padding:35px;border-radius:10px;background:#f8fafc;border-left:5px solid #2563eb}
+.vision-card h3{color:#0b1f3a;margin-bottom:12px;font-size:25px}
+.vision-card p{color:#6b7280}
 
-    /* Modal Form Fields */
-    .form-group {
-      margin-bottom: 18px;
-      text-align: left;
-    }
-    .form-group label {
-      display: block;
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: #334155;
-      margin-bottom: 6px;
-    }
-    .form-group input, 
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1.5px solid #cbd5e1;
-      border-radius: 10px;
-      font-size: 0.95rem;
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .form-group input:focus, 
-    .form-group textarea:focus {
-      border-color: #3b82f6;
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
-    }
+.values{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
+.value{text-align:center;padding:25px 15px;border:1px solid #e5e7eb;border-radius:8px;background:#fff}
+.value h3{color:#2563eb;font-size:17px}
 
-    .submit-btn {
-      width: 100%;
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      color: white;
-      padding: 14px;
-      border: none;
-      border-radius: 10px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.1s;
-    }
-    .submit-btn:hover {
-      background: linear-gradient(135deg, #1d4ed8, #1e40af);
-    }
-    .submit-btn:active {
-      transform: scale(0.98);
-    }
+.society{background:#0b1f3a;color:#fff;text-align:center}
+.society h2{font-size:38px;margin-bottom:15px}
+.tagline-large{font-size:24px;color:#93c5fd;font-weight:bold;margin-bottom:25px}
+.society p{max-width:850px;margin:auto;color:#dbeafe;font-size:17px}
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .section-title { font-size: 2rem; }
-    }
-  </style>
+/* CONTACT */
+.contact{background:#f8fafc}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:40px}
+.contact-info{background:#0b1f3a;color:#fff;padding:40px;border-radius:10px}
+.contact-info h3{font-size:26px;margin-bottom:20px}
+.contact-info p{margin-bottom:15px;color:#dbeafe}
+.contact-info a{color:#93c5fd}
+.whatsapp{display:inline-block;margin-top:15px;padding:12px 22px;background:#25D366;color:#fff!important;border-radius:6px;font-weight:bold}
+.gform-card{background:#fff;padding:40px;border-radius:10px;border:1px solid #e5e7eb;box-shadow:0 5px 20px rgba(0,0,0,.06);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.gform-card h3{font-size:26px;color:#0b1f3a;margin-bottom:15px}
+.gform-card p{color:#6b7280;margin-bottom:25px;font-size:16px}
+
+/* MNC SECTOR DETAIL PAGE DESIGN */
+.sector-header{background:linear-gradient(rgba(11,31,58,0.85),rgba(11,31,58,0.92)),url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1600&q=80') center/cover;color:#fff;padding:80px 20px;text-align:center;border-radius:10px;margin-bottom:40px}
+.sector-header h1{font-size:38px;margin-bottom:10px}
+.sector-header p{font-size:18px;color:#93c5fd}
+
+.mnc-grid{display:grid;grid-template-columns:2fr 1fr;gap:40px}
+.mnc-box{background:#fff;padding:35px;border-radius:10px;border:1px solid #e5e7eb;box-shadow:0 4px 15px rgba(0,0,0,0.04)}
+.mnc-box h2{font-size:24px;color:#0b1f3a;margin-bottom:15px;border-left:4px solid #2563eb;padding-left:12px}
+.mnc-box p{color:#4b5563;font-size:16px;margin-bottom:20px;line-height:1.7}
+.mnc-list{list-style:none;margin-bottom:25px}
+.mnc-list li{margin-bottom:10px;color:#374151;font-size:15px}
+.mnc-list li::before{content:"✓ ";color:#2563eb;font-weight:bold}
+
+.sidebar-box{background:#0b1f3a;color:#fff;padding:30px;border-radius:10px;height:fit-content}
+.sidebar-box h3{font-size:20px;margin-bottom:15px;color:#93c5fd}
+.sidebar-box p{color:#dbeafe;font-size:14px;margin-bottom:20px}
+
+/* MEDICINE & SYRUP SLIDER CAROUSEL */
+.syrup-section-title{font-size:20px;color:#0b1f3a;margin:25px 0 15px;font-weight:700}
+.syrup-slider-container{margin:15px 0 30px;overflow:hidden;border-radius:12px;border:1px solid #e5e7eb;background:#f8fafc;padding:20px}
+.syrup-slider{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:15px}
+.syrup-card{flex:0 0 260px;scroll-snap-align:start;background:#fff;border-radius:10px;border:1px solid #e5e7eb;padding:15px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.04);transition:0.3s}
+.syrup-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.08);border-color:#2563eb}
+.syrup-card img{width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px}
+.syrup-card h4{font-size:16px;color:#0b1f3a;margin-bottom:6px;font-weight:700}
+.syrup-card span{font-size:13px;color:#2563eb;font-weight:600}
+
+/* FOOTER */
+footer{background:#061426;color:#fff;padding:45px 20px 20px}
+.footer-grid{max-width:1150px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer h3{margin-bottom:15px}
+footer p,footer a{color:#cbd5e1;font-size:14px}
+footer a{display:block;margin-bottom:8px}
+.footer-bottom{max-width:1150px;margin:35px auto 0;padding-top:20px;border-top:1px solid #1e293b;text-align:center;color:#94a3b8;font-size:13px}
+
+@media(max-width:900px){
+.services-grid{grid-template-columns:repeat(2,1fr)}
+.features,.values,.footer-grid,.mnc-grid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+.navbar{flex-direction:column;gap:12px;padding:12px 15px}
+.hero h1{font-size:34px}
+.services-grid,.features,.values,.vision-grid,.contact-grid,.footer-grid{grid-template-columns:1fr}
+}
+</style>
 </head>
+
 <body>
 
-  <!-- ==========================================
-     NAVBAR
-     ========================================== -->
-  <nav class="navbar">
-    <div class="nav-logo">
-      <!-- Aapka Site Logo -->
-      <img src="https://via.placeholder.com/140x45/0f172a/ffffff?text=MY+BRAND" alt="Company Logo" />
-    </div>
-    <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="nav-contact-btn openModalBtn">Contact With Us</button>
-  </nav>
+<!-- STICKY HEADER WITH LOGO & COMPANY NAME -->
+<header>
+<div class="navbar">
 
-  <!-- ==========================================
-     SECTION 1: HERO (Dark Blue Gradient)
-     ========================================== -->
-  <section id="hero">
-    <h1 class="section-title">Grow Your Business With Us</h1>
-    <p class="section-desc">Hum aapke business ko next level par le jane ke liye modern, scalable aur high-performance digital solutions provide karte hain.</p>
-    <button class="action-btn openModalBtn">Contact With Us</button>
-  </section>
-
-  <!-- ==========================================
-     SECTION 2: SERVICES (Emerald Dark Gradient)
-     ========================================== -->
-  <section id="services">
-    <h2 class="section-title">Our Specialized Services</h2>
-    <p class="section-desc">Hum best-in-class tech aur marketing solutions design karte hain.</p>
-    
-    <div class="cards-grid">
-      <div class="card">
-        <i class="fa-solid fa-laptop-code"></i>
-        <h3>Web Development</h3>
-        <p>Ultra-fast aur responsive websites jo har screen size par perfectly chalti hain.</p>
-      </div>
-      <div class="card">
-        <i class="fa-solid fa-chart-line"></i>
-        <h3>Digital Marketing</h3>
-        <p>Aapke brand ki reach aur engagement ko kayi guna badhane ke liye strategic ads.</p>
-      </div>
-      <div class="card">
-        <i class="fa-solid fa-paintbrush"></i>
-        <h3>UI/UX Design</h3>
-        <p>Clean, modern aur user-friendly interfaces jo conversion rate badhate hain.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-     SECTION 3: ABOUT US (Purple Indigo Gradient)
-     ========================================== -->
-  <section id="about">
-    <h2 class="section-title">About Our Enterprise</h2>
-    <p class="section-desc">Humari team creative thinkers aur experienced developers se bani hai jo aapke vision ko reality me convert karte hain.</p>
-    <button class="action-btn openModalBtn">Get Free Consultation</button>
-  </section>
-
-  <!-- ==========================================
-     SECTION 4: CONTACT SECTION (Charcoal Slate)
-     ========================================== -->
-  <section id="contact">
-    <h2 class="section-title">Ready To Start A Project?</h2>
-    <p class="section-desc">Directly contact karein ya humse judne ke liye form submit karein.</p>
-    <button class="action-btn openModalBtn" style="background: linear-gradient(135deg, #10b981, #059669);">Contact With Us Now</button>
-  </section>
-
-  <!-- ==========================================
-     POP-UP MODAL FORM (TRIGGERED ON CLICK)
-     ========================================== -->
-  <div id="contactModal" class="modal-overlay">
-    <div class="modal-box">
-      <span class="close-btn" id="closeModalBtn">&times;</span>
-      
-      <!-- Logo Header inside Form -->
-      <div class="modal-logo-header">
-        <img src="https://via.placeholder.com/140x45/ffffff/0f172a?text=MY+BRAND" alt="Brand Logo" />
-        <h2>Contact With Us</h2>
-        <p>Niche apni details bhrein, hum 24 ghante me contact karenge.</p>
-      </div>
-
-      <!-- Professional Form -->
-      <form id="popupForm">
-        <div class="form-group">
-          <label for="fullName">Full Name</label>
-          <input type="text" id="fullName" placeholder="Apna pura naam dalein" required />
-        </div>
-        <div class="form-group">
-          <label for="emailAddr">Email Address</label>
-          <input type="email" id="emailAddr" placeholder="name@example.com" required />
-        </div>
-        <div class="form-group">
-          <label for="msgContent">Message</label>
-          <textarea id="msgContent" rows="4" placeholder="Apna message yahan likhein..." required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
-      </form>
-    </div>
+<div class="brand" onclick="navigateTo('home')">
+  <img src="logo.png" alt="AVERIN Logo" class="brand-logo-img" onerror="this.style.display='none'; document.getElementById('alt-logo').style.display='flex';">
+  <div id="alt-logo" class="brand-logo-box" style="display:none;"><i class="fa-solid fa-capsules"></i></div>
+  <div class="brand-text">
+    <div class="brand-name">AVERIN VENTURES</div>
+    <div class="brand-subtitle">PRIVATE LIMITED</div>
   </div>
+</div>
 
-  <!-- ==========================================
-     JAVASCRIPT (MODAL & FORM LOGIC)
-     ========================================== -->
-  <script>
-    const modal = document.getElementById('contactModal');
-    const openBtns = document.querySelectorAll('.openModalBtn');
-    const closeBtn = document.getElementById('closeModalBtn');
-    const form = document.getElementById('popupForm');
+<nav>
+<a onclick="navigateTo('home')">Home</a>
+<a onclick="navigateTo('home'); setTimeout(()=>document.getElementById('about').scrollIntoView(),100)">About Us</a>
+<a onclick="navigateTo('home'); setTimeout(()=>document.getElementById('services').scrollIntoView(),100)">Services</a>
+<a onclick="navigateTo('home'); setTimeout(()=>document.getElementById('values').scrollIntoView(),100)">Values</a>
+<a onclick="navigateTo('home'); setTimeout(()=>document.getElementById('contact').scrollIntoView(),100)">Contact</a>
+</nav>
 
-    // Har "Contact With Us" button click par Modal kholein
-    openBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        modal.style.display = 'flex';
-      });
-    });
+</div>
+</header>
 
-    // Close Button ('X') par click par modal band karein
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
+<!-- HOME PAGE -->
+<div id="page-home" class="page active">
 
-    // Modal ke bahar dark background par click karne par modal band karein
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
+<section class="hero" id="home">
+<div class="hero-content">
 
-    // Form Submit handling (Demo Alert)
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Shukriya! Aapka message successfully bhej diya gaya hai.');
-      modal.style.display = 'none';
-      form.reset();
-    });
-  </script>
+<div class="hero-logo-icon">
+  <i class="fa-solid fa-building-user"></i>
+</div>
+
+<h1>AVERIN VENTURES<br>PRIVATE LIMITED</h1>
+<div class="tagline">For You. For Society.</div>
+<p>A professionally managed and growth-oriented business enterprise engaged in pharmaceuticals, commercial operations, and multi-sector support activities across India.</p>
+
+<div class="buttons">
+<a href="#services" class="btn btn-primary">Explore Business Units</a>
+<a href="#contact" class="btn btn-light">Contact Us</a>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+<div class="container">
+<div class="section-title">
+<h2>About Us</h2>
+<p>Building a professional, reliable and sustainable business platform.</p>
+</div>
+<div class="about-box">
+<h3>Building Opportunities. Creating Value.</h3>
+<p>AVERIN VENTURES PRIVATE LIMITED aims to build a diversified and sustainable business platform by delivering reliable products, services and operational solutions.</p><br>
+<p>Our approach is based on professionalism, responsible operations, quality execution and long-term business relationships.</p><br>
+<p>We aim to create value not only for our clients and business partners, but also through responsible participation in society and economic development.</p>
+</div>
+</div>
+</section>
+
+<!-- SERVICES GRID (10 BUSINESS UNITS) -->
+<section id="services">
+<div class="container">
+<div class="section-title">
+<h2>Our Business Areas</h2>
+<p>Click on any sector to view MNC Corporate operational details & product range.</p>
+</div>
+
+<div class="services-grid">
+
+<!-- 01. AVERIN PHARMACEUTICALS -->
+<div class="service-card" onclick="navigateTo('sector-pharma')">
+<div class="service-icon"><i class="fa-solid fa-capsules"></i></div>
+<h3>01. Averin Pharmaceuticals</h3>
+<p>PCD Pharma Franchise, third-party manufacturing, syrups, liquid oral range, tablets & healthcare distribution.</p>
+<span class="view-more-link">Open Pharma Division →</span>
+</div>
+
+<!-- 02. TRADING & DISTRIBUTION -->
+<div class="service-card" onclick="navigateTo('sector-trading')">
+<div class="service-icon"><i class="fa-solid fa-boxes-packing"></i></div>
+<h3>02. Trading & Distribution</h3>
+<p>Procurement, sourcing, wholesale, retail, distribution and supply chain of lawful products and materials.</p>
+<span class="view-more-link">Open Sector Page →</span>
+</div>
+
+<!-- 03. TRANSPORT & LOGISTICS -->
+<div class="service-card" onclick="navigateTo('sector-logistics')">
+<div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
+<h3>03. Transport & Logistics</h3>
+<p>Transportation, logistics, delivery, fleet coordination, cold chain, and warehousing support.</p>
+<span class="view-more-link">Open Sector Page →</span>
+</div>
+
+<!-- 04. MANPOWER & STAFFING -->
+<div class="service-card" onclick="navigateTo('sector-manpower')">
+<div class="service-icon"><i class="fa-solid fa-users-gear"></i></div>
+<h3>04. Manpower & Staffing</h3>
+<p>Manpower supply, staffing, recruitment, workforce management and operational support services.</p>
+<span class="view-more-link">Open Sector Page →</span>
+</div>
+
+<!-- 05. CONSTRUCTION & INFRASTRUCTURE -->
+<div class="service-card" onclick="navigateTo('sector-construction')">
+<div class="service-icon"><i class="fa-solid fa-city"></i></div>
+<h3>05. Construction & Infrastructure</h3>
+<p>Construction, civil works, project execution, maintenance and turnkey infrastructure services.</p>
+<span class="view-more-link">Open Sector Page →</span>
+</div>
+
+<!-- 06. HOSPITALITY & TOURISM -->
+<div class="service-card" onclick="navigateTo('sector-hospitality')">
+<div class="service-icon"><i class="fa-solid fa-hotel"></i></div>
+<h3>06. Hospitality & Tourism</h3>
+<p>Hotel, resort, restaurant, guest-house, hospitality management and allied guest services.</p>
+<span class="view-more-link">Open Sector Page →</span>
+</div>
+
+<!-- 07. MANUFACTURING & PROCESSING -->
+<div class="service-card" onclick="navigateTo('sector-manufacturing')">
+<div class="service-icon"><i class="fa-solid fa-industry"></i></div>
+<h3>07. Manufacturing & Processing</h3>
+<p>Manufacturing, processing, fabrication, assembly, precision engineering and packaging activities.</p>
+<span class="view-more-link">Open Sector Page →</span>
+</div>
+
+<!-- 08. AGRICULTURE & FOOD PROCESSING -->
+<div class="service-card" onclick="navigateTo('sector-agriculture')">
+<div class="service-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+<h3>08. Agriculture & Food Processing</h3>
+<p>Agricultural, agro-based, food-processing, organic farming and allied commercial activities.</p>
+<span class="view-more-link">Open Sector Page →</span>
+</div>
+
+<!-- 09. CONSULTANCY & BUSINESS SERVICES -->
+<div class="service-card" onclick="navigateTo('sector-consultancy')">
+<div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+<h3>09. Consultancy & Business Services</h3>
+<p>Business, management, operational, financial risk auditing, and commercial consultancy services.</p>
+<span class="view-more-link">Open Sector Page →</span>
+</div>
+
+<!-- 10. IT & DIGITAL SERVICES -->
+<div class="service-card" onclick="navigateTo('sector-it')">
+<div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+<h3>10. IT & Digital Services</h3>
+<p>Websites, enterprise software, AI platforms, automation and technology-enabled business solutions.</p>
+<span class="view-more-link">Open Sector Page →</span>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+<div class="container">
+<div class="section-title"><h2>Why Choose AVERIN VENTURES</h2></div>
+<div class="features">
+<div class="feature"><div class="feature-icon">◆</div><h3>Professional Operations</h3><p>Systematic planning, efficient execution and responsible business operations.</p></div>
+<div class="feature"><div class="feature-icon">✓</div><h3>Quality & Reliability</h3><p>A strong focus on dependable service, quality execution and professional standards.</p></div>
+<div class="feature"><div class="feature-icon">◎</div><h3>Client-Focused Approach</h3><p>Understanding requirements and providing practical and reliable business solutions.</p></div>
+<div class="feature"><div class="feature-icon">↗</div><h3>Sustainable Growth</h3><p>Building long-term relationships and expanding responsibly across business sectors.</p></div>
+</div>
+</div>
+</section>
+
+<!-- VISION & MISSION -->
+<section><div class="container"><div class="section-title"><h2>Our Vision & Mission</h2></div><div class="vision-grid"><div class="vision-card"><h3>Our Vision</h3><p>To build a professionally managed enterprise that creates sustainable value for customers, business partners, employees and society.</p></div><div class="vision-card"><h3>Our Mission</h3><p>To deliver reliable services and business solutions through professional management, efficient operations, and quality execution.</p></div></div></div></section>
+
+<!-- VALUES -->
+<section id="values" class="about"><div class="container"><div class="section-title"><h2>Our Values</h2></div><div class="values"><div class="value"><h3>Integrity</h3></div><div class="value"><h3>Professionalism</h3></div><div class="value"><h3>Reliability</h3></div><div class="value"><h3>Innovation</h3></div><div class="value"><h3>Responsibility</h3></div></div></div></section>
+
+<!-- SOCIETY -->
+<section class="society"><div class="container"><h2>For You. For Society.</h2><div class="tagline-large">Business Growth With Responsibility</div><p>We believe that sustainable business growth goes hand in hand with creating opportunities and contributing positively to society.</p></div></section>
+
+<!-- CONTACT SECTION -->
+<section class="contact" id="contact">
+<div class="container">
+<div class="section-title"><h2>Contact Us</h2><p>Connect with AVERIN VENTURES PRIVATE LIMITED for business enquiries and opportunities.</p></div>
+<div class="contact-grid">
+
+<div class="contact-info">
+<h3>AVERIN VENTURES<br>PRIVATE LIMITED</h3>
+<p><strong>Tagline:</strong><br>For You. For Society.</p>
+<p><strong>Email Address:</strong><br><a href="mailto:averinvetures@gmail.com">averinvetures@gmail.com</a></p>
+<p><strong>WhatsApp / Phone:</strong><br><a href="tel:+917398753008">+91 7398753008</a></p>
+<p><strong>Registered Office:</strong><br>11/70 Shahid Path Behsa,<br>Lucknow, Uttar Pradesh - 226023,<br>India</p>
+<a class="whatsapp" href="https://wa.me/917398753008?text=Hello%20AVERIN%20VENTURES%2C%20I%20would%20like%20to%20make%20a%20business%20enquiry." target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+</div>
+
+<div class="gform-card">
+<h3>Business Enquiry Form</h3>
+<p>Please click the button below to fill out our official Google Form and submit your business requirements directly to us.</p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScf5ZAYPk2E4f8A8KJsEfj49w0QgO4C3xDHB5R4myZFgRv-BA/viewform?usp=header" target="_blank" class="btn btn-primary">Fill Enquiry Form</a>
+</div>
+
+</div>
+</div>
+</section>
+
+</div>
+
+<!-- SECTOR PAGE 01: AVERIN PHARMACEUTICALS DIVISION -->
+<div id="page-sector-pharma" class="page">
+<div class="container" style="padding-top:40px;">
+<div class="sector-header">
+<h1>AVERIN PHARMACEUTICALS</h1>
+<p>PCD Pharma Franchise | Third-Party Manufacturing | Liquid Syrups & Healthcare Range</p>
+</div>
+
+<div class="mnc-grid">
+<div class="mnc-box">
+<h2>MNC Corporate Overview</h2>
+<p>AVERIN PHARMACEUTICALS (A Division of Averin Ventures Private Limited) is committed to high-standard pharmaceutical franchise distribution, third-party manufacturing, and ethical pharmaceutical supply chain operations across India.</p>
+
+<h3 class="syrup-section-title">Syrup & Liquid Medicine Product Range</h3>
+<p style="color:#6b7280;font-size:14px;">High quality WHO-GMP certified liquid oral syrups and healthcare formulations. <i>(Future me aap in image URLs ko apni company ke asli syrup photos se badal sakte hain).</i></p>
+
+<!-- PROFESSIONAL SYRUP SLIDER CAROUSEL -->
+<div class="syrup-slider-container">
+<div class="syrup-slider">
+
+<div class="syrup-card">
+<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=500&q=80" alt="Cough & Cold Syrup">
+<h4>Cough & Cold Syrup</h4>
+<span>100ml / 200ml Liquid Oral</span>
+</div>
+
+<div class="syrup-card">
+<img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=500&q=80" alt="Multivitamin Tonic Syrup">
+<h4>Multivitamin & Iron Syrup</h4>
+<span>200ml Health Tonic</span>
+</div>
+
+<div class="syrup-card">
+<img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=500&q=80" alt="Digestive Antacid Syrup">
+<h4>Antacid & Digestive Syrup</h4>
+<span>Sugar-Free Formula</span>
+</div>
+
+<div class="syrup-card">
+<img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=500&q=80" alt="Pediatric Syrup Range">
+<h4>Pediatric Care Syrup</h4>
+<span>Delicious Mango Flavor</span>
+</div>
+
+<div class="syrup-card">
+<img src="https://images.unsplash.com/photo-1550572017-edd951aa8f72?auto=format&fit=crop&w=500&q=80" alt="Herbal Liver Tonic">
+<h4>Herbal Liver Tonic Syrup</h4>
+<span>200ml Ayurvedic Care</span>
+</div>
+
+</div>
+</div>
+
+<h2>PCD Franchise & Manufacturing Capabilities</h2>
+<ul class="mnc-list">
+<li>Exclusive District Monopoly Rights for PCD Pharma Franchise partners.</li>
+<li>Third-Party manufacturing partnership with WHO-GMP certified facilities.</li>
+<li>DCGI approved molecules, syrups, suspension, tablets, and capsules.</li>
+<li>Visual aids, LBLs, sample catch covers, and MR promotional kits provided.</li>
+</ul>
+
+<button class="btn btn-primary" onclick="navigateTo('home'); setTimeout(()=>document.getElementById('contact').scrollIntoView(),100)">Inquire for Pharma Franchise</button>
+<button class="btn btn-light" style="border:1px solid #cbd5e1;margin-left:10px" onclick="navigateTo('home')">← Back to Main Page</button>
+</div>
+
+<div class="sidebar-box">
+<h3>Pharma Business Desk</h3>
+<p>Looking for PCD Franchise or Third-Party Manufacturing partnership?</p>
+<p><strong>Phone / WhatsApp:</strong><br><a href="tel:+917398753008" style="color:#93c5fd;">+91 7398753008</a></p>
+<p><strong>Email:</strong><br><a href="mailto:averinvetures@gmail.com" style="color:#93c5fd;">averinvetures@gmail.com</a></p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScf5ZAYPk2E4f8A8KJsEfj49w0QgO4C3xDHB5R4myZFgRv-BA/viewform?usp=header" target="_blank" class="btn btn-primary" style="display:block;text-align:center">Fill Google Form</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- DYNAMIC SECTOR PAGE FOR OTHER SECTORS -->
+<div id="page-sector-generic" class="page">
+<div class="container" style="padding-top:40px;">
+<div class="sector-header">
+<h1 id="generic-title">Business Sector Division</h1>
+<p id="generic-subtitle">Corporate Operational & Commercial Business Solutions</p>
+</div>
+<div class="mnc-grid">
+<div class="mnc-box">
+<h2>Corporate Operational Standards</h2>
+<p id="generic-desc">AVERIN VENTURES PRIVATE LIMITED delivers systematic execution, quality assurance, and compliance-driven solutions for large enterprise requirements.</p>
+<h2>Key Capabilities</h2>
+<ul class="mnc-list">
+<li>Turnkey project execution & strategic commercial partnerships.</li>
+<li>Rigid adherence to statutory norms, safety standards, and SLAs.</li>
+<li>Scalable workforce, logistics, and digital execution capabilities.</li>
+</ul>
+<button class="btn btn-primary" onclick="navigateTo('home'); setTimeout(()=>document.getElementById('contact').scrollIntoView(),100)">Submit Business Requirement</button>
+<button class="btn btn-light" style="border:1px solid #cbd5e1;margin-left:10px" onclick="navigateTo('home')">← Back to Main Page</button>
+</div>
+<div class="sidebar-box">
+<h3>Corporate Desk</h3>
+<p>Connect with our business development team.</p>
+<p><strong>Phone:</strong> +91 7398753008</p>
+<p><strong>Email:</strong> averinvetures@gmail.com</p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScf5ZAYPk2E4f8A8KJsEfj49w0QgO4C3xDHB5R4myZFgRv-BA/viewform?usp=header" target="_blank" class="btn btn-primary" style="display:block;text-align:center">Fill Google Form</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-grid">
+<div>
+<h3>AVERIN VENTURES PRIVATE LIMITED</h3>
+<p>For You. For Society.</p><br>
+<p>A diversified business enterprise focused on professional operations, reliable services and sustainable growth.</p>
+</div>
+<div>
+<h3>Quick Links</h3>
+<a onclick="navigateTo('home')">Home</a>
+<a onclick="navigateTo('home'); setTimeout(()=>document.getElementById('about').scrollIntoView(),100)">About Us</a>
+<a onclick="navigateTo('home'); setTimeout(()=>document.getElementById('services').scrollIntoView(),100)">Our Services</a>
+<a onclick="navigateTo('home'); setTimeout(()=>document.getElementById('contact').scrollIntoView(),100)">Contact Us</a>
+</div>
+<div>
+<h3>Contact</h3>
+<a href="mailto:averinvetures@gmail.com">averinvetures@gmail.com</a>
+<a href="tel:+917398753008">+91 7398753008</a>
+<a href="https://wa.me/917398753008" target="_blank">WhatsApp</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>AVERIN VENTURES PRIVATE LIMITED shall undertake business activities subject to applicable laws, licences, registrations, approvals, permits and statutory requirements.</p><br>
+<p>© 2026 AVERIN VENTURES PRIVATE LIMITED. All Rights Reserved.</p>
+</div>
+</footer>
+
+<!-- PAGE ROUTING JAVASCRIPT -->
+<script>
+function navigateTo(pageId) {
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(p => p.classList.remove('active'));
+  
+  if(pageId === 'home') {
+    document.getElementById('page-home').classList.add('active');
+  } else if(pageId === 'sector-pharma') {
+    document.getElementById('page-sector-pharma').classList.add('active');
+  } else {
+    const titles = {
+      'sector-trading': 'Trading & Global Distribution',
+      'sector-logistics': 'Transport & Smart Logistics',
+      'sector-manpower': 'Manpower & Human Capital Staffing',
+      'sector-construction': 'Construction & Infrastructure Engineering',
+      'sector-hospitality': 'Hospitality & Resort Management',
+      'sector-manufacturing': 'Industrial Manufacturing & Packaging',
+      'sector-agriculture': 'Agriculture & Food Processing Sector',
+      'sector-consultancy': 'Corporate Advisory & Management Consultancy',
+      'sector-it': 'Enterprise IT & Digital Solutions'
+    };
+    document.getElementById('generic-title').innerText = titles[pageId] || 'Business Sector Division';
+    document.getElementById('page-sector-generic').classList.add('active');
+  }
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
 </body>
 </html>
