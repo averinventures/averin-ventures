@@ -12,120 +12,180 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:#1f2937;background:#fff;line-height:1.6}
+
+/* BODY WITH WATERMARK BACKGROUND LOGO & SOFT COLOR PALETTE */
+body{
+  font-family:'Segoe UI', Arial, Helvetica, sans-serif;
+  color:#1e293b;
+  background-color:#f1f5f9;
+  background-image: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.03) 0%, rgba(15, 23, 42, 0.05) 100%), url('logo.png');
+  background-repeat: repeat, no-repeat;
+  background-position: center center, center center;
+  background-size: auto, 450px auto;
+  background-attachment: scroll, fixed;
+  line-height:1.6;
+}
+
 a{text-decoration:none}
 
 /* STICKY HEADER WITH LOGO AND COMPANY NAME */
-header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #e5e7eb;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid #cbd5e1;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
 .navbar{max-width:1250px;margin:auto;padding:12px 25px;display:flex;justify-content:space-between;align-items:center;gap:20px}
 
 .brand{display:flex;align-items:center;gap:12px;color:#0b1f3a;cursor:pointer}
-.brand-logo-box{width:50px;height:50px;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;box-shadow:0 4px 10px rgba(37,99,235,0.3)}
-.brand-logo-img{width:50px;height:50px;object-fit:contain;display:block}
+.brand-logo-box{width:48px;height:48px;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;box-shadow:0 4px 10px rgba(37,99,235,0.3)}
+.brand-logo-img{width:48px;height:48px;object-fit:contain;display:block}
 
 .brand-text{display:flex;flex-direction:column;line-height:1.15}
 .brand-name{font-size:20px;font-weight:800;letter-spacing:.5px;color:#0b1f3a}
 .brand-subtitle{font-size:11px;color:#2563eb;letter-spacing:2px;font-weight:700;margin-top:3px}
 
 nav{display:flex;gap:22px;align-items:center}
-nav a{color:#1f2937;font-weight:600;font-size:15px;transition:.3s;cursor:pointer}
+nav a{color:#334155;font-weight:600;font-size:15px;transition:.3s;cursor:pointer}
 nav a:hover{color:#2563eb}
 
 .page{display:none}
 .page.active{display:block;animation:fadeIn 0.3s ease-in-out}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-/* HERO SECTION WITH ORIGINAL BACKGROUND */
-.hero{min-height:650px;display:flex;align-items:center;text-align:center;color:#fff;background:linear-gradient(rgba(5,25,55,.88),rgba(8,50,95,.90)),url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80") center/cover}
+/* HERO SECTION WITH ORIGINAL OVERLAY BACKGROUND */
+.hero{min-height:620px;display:flex;align-items:center;text-align:center;color:#fff;background:linear-gradient(rgba(11,31,58,0.90),rgba(15,23,42,0.92)),url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80") center/cover}
 .hero-content{max-width:920px;margin:auto;padding:80px 25px}
-.hero-logo-icon{width:90px;height:90px;background:#fff;color:#2563eb;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:42px;margin:0 auto 20px;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
-.hero h1{font-size:46px;line-height:1.15;margin-bottom:18px;letter-spacing:1px;font-weight:800}
-.tagline{font-size:24px;font-weight:600;color:#dbeafe;margin-bottom:25px}
-.hero p{font-size:18px;max-width:780px;margin:auto;color:#e5e7eb}
+.hero-logo-icon{width:85px;height:85px;background:rgba(255,255,255,0.95);color:#2563eb;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:40px;margin:0 auto 20px;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+.hero h1{font-size:44px;line-height:1.15;margin-bottom:18px;letter-spacing:1px;font-weight:800}
+.tagline{font-size:24px;font-weight:600;color:#93c5fd;margin-bottom:25px}
+.hero p{font-size:18px;max-width:780px;margin:auto;color:#cbd5e1}
 .buttons{margin-top:35px;display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
 
 .btn{display:inline-block;padding:13px 26px;border-radius:6px;font-weight:700;transition:.3s;cursor:pointer;border:none}
-.btn-primary{background:#2563eb;color:#fff}
+.btn-primary{background:#2563eb;color:#fff;box-shadow:0 4px 12px rgba(37,99,235,0.3)}
 .btn-primary:hover{background:#1d4ed8;transform:translateY(-2px)}
 .btn-light{background:#fff;color:#0b1f3a}
-.btn-light:hover{background:#e5e7eb;transform:translateY(-2px)}
+.btn-light:hover{background:#e2e8f0;transform:translateY(-2px)}
 
 section{padding:80px 20px}
 .container{max-width:1150px;margin:auto}
 .section-title{text-align:center;margin-bottom:45px}
-.section-title h2{font-size:34px;color:#0b1f3a;margin-bottom:12px}
-.section-title p{max-width:750px;margin:auto;color:#6b7280}
+.section-title h2{font-size:34px;color:#0b1f3a;margin-bottom:12px;font-weight:800}
+.section-title p{max-width:750px;margin:auto;color:#64748b;font-size:16px}
 
-.about{background:#f8fafc}
-.about-box{max-width:900px;margin:auto;text-align:center}
+/* SOFT BG FOR SECTIONS */
+.about{background:rgba(255, 255, 255, 0.85);backdrop-filter:blur(5px)}
+.about-box{max-width:920px;margin:auto;text-align:center;background:#ffffff;padding:40px;border-radius:14px;border:1px solid #e2e8f0;box-shadow:0 8px 25px rgba(0,0,0,0.03)}
 .about-box h3{font-size:28px;color:#2563eb;margin-bottom:20px}
-.about-box p{color:#4b5563;font-size:17px}
+.about-box p{color:#475569;font-size:17px;line-height:1.7}
 
 /* SERVICES GRID */
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
-.service-card{padding:30px 25px;background:#fff;border:1px solid #e5e7eb;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.05);transition:.3s;cursor:pointer}
-.service-card:hover{transform:translateY(-5px);box-shadow:0 12px 28px rgba(0,0,0,.10);border-color:#2563eb}
-.service-icon{font-size:32px;color:#2563eb;margin-bottom:12px}
-.service-card h3{color:#0b1f3a;font-size:20px;margin-bottom:12px}
-.service-card p{color:#6b7280;font-size:15px;margin-bottom:15px}
-.view-more-link{color:#2563eb;font-weight:bold;font-size:14px;display:inline-block}
+.service-card{padding:30px 25px;background:rgba(255,255,255,0.92);backdrop-filter:blur(5px);border:1px solid #cbd5e1;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.03);transition:.3s;cursor:pointer}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(37,99,235,0.12);border-color:#2563eb;background:#ffffff}
+.service-icon{font-size:34px;color:#2563eb;margin-bottom:14px}
+.service-card h3{color:#0b1f3a;font-size:20px;margin-bottom:12px;font-weight:700}
+.service-card p{color:#64748b;font-size:15px;margin-bottom:16px;line-height:1.6}
+.view-more-link{color:#2563eb;font-weight:700;font-size:14px;display:inline-block}
 
 /* WHY / VISION / VALUES / SOCIETY */
-.why{background:#f8fafc}
+.why{background:rgba(241, 245, 249, 0.8)}
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.feature{background:#fff;padding:30px 20px;text-align:center;border-radius:10px;border:1px solid #e5e7eb}
-.feature-icon{font-size:32px;margin-bottom:15px}
+.feature{background:#ffffff;padding:30px 20px;text-align:center;border-radius:12px;border:1px solid #cbd5e1;box-shadow:0 4px 15px rgba(0,0,0,0.02)}
+.feature-icon{font-size:32px;margin-bottom:15px;color:#2563eb}
 .feature h3{color:#0b1f3a;margin-bottom:10px}
-.feature p{color:#6b7280;font-size:14px}
+.feature p{color:#64748b;font-size:14px}
 
 .vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
-.vision-card{padding:35px;border-radius:10px;background:#f8fafc;border-left:5px solid #2563eb}
+.vision-card{padding:35px;border-radius:12px;background:#ffffff;border-left:5px solid #2563eb;border-top:1px solid #e2e8f0;border-right:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;box-shadow:0 4px 15px rgba(0,0,0,0.02)}
 .vision-card h3{color:#0b1f3a;margin-bottom:12px;font-size:25px}
-.vision-card p{color:#6b7280}
+.vision-card p{color:#64748b}
 
 .values{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
-.value{text-align:center;padding:25px 15px;border:1px solid #e5e7eb;border-radius:8px;background:#fff}
+.value{text-align:center;padding:25px 15px;border:1px solid #cbd5e1;border-radius:10px;background:#ffffff;box-shadow:0 4px 12px rgba(0,0,0,0.02)}
 .value h3{color:#2563eb;font-size:17px}
 
-.society{background:#0b1f3a;color:#fff;text-align:center}
+.society{background:linear-gradient(135deg, #0b1f3a 0%, #0f172a 100%);color:#fff;text-align:center}
 .society h2{font-size:38px;margin-bottom:15px}
 .tagline-large{font-size:24px;color:#93c5fd;font-weight:bold;margin-bottom:25px}
 .society p{max-width:850px;margin:auto;color:#dbeafe;font-size:17px}
 
-/* CONTACT */
-.contact{background:#f8fafc}
-.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:40px}
-.contact-info{background:#0b1f3a;color:#fff;padding:40px;border-radius:10px}
+/* CONTACT SECTION */
+.contact{background:rgba(248, 250, 252, 0.85)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:35px}
+.contact-info{background:#0b1f3a;color:#fff;padding:40px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
 .contact-info h3{font-size:26px;margin-bottom:20px}
 .contact-info p{margin-bottom:15px;color:#dbeafe}
 .contact-info a{color:#93c5fd}
 .whatsapp{display:inline-block;margin-top:15px;padding:12px 22px;background:#25D366;color:#fff!important;border-radius:6px;font-weight:bold}
-.gform-card{background:#fff;padding:40px;border-radius:10px;border:1px solid #e5e7eb;box-shadow:0 5px 20px rgba(0,0,0,.06);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
-.gform-card h3{font-size:26px;color:#0b1f3a;margin-bottom:15px}
-.gform-card p{color:#6b7280;margin-bottom:25px;font-size:16px}
+
+/* MNC ENQUIRY CARD WITH PHOTO BANNER */
+.mnc-enquiry-card{
+  background:#ffffff;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid #cbd5e1;
+  box-shadow:0 8px 25px rgba(0,0,0,0.06);
+  display:flex;
+  flex-direction:column;
+  transition: transform 0.3s;
+}
+.mnc-enquiry-card:hover{transform:translateY(-4px)}
+.mnc-enquiry-img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+.mnc-enquiry-body{
+  padding:30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  flex-grow:1;
+}
+.mnc-enquiry-body h3{
+  font-size:24px;
+  color:#0b1f3a;
+  margin-bottom:10px;
+  font-weight:700;
+}
+.mnc-enquiry-body p{
+  color:#64748b;
+  font-size:15px;
+  margin-bottom:20px;
+  line-height:1.6;
+}
+.mnc-badge{
+  display:inline-block;
+  background:#eff6ff;
+  color:#2563eb;
+  padding:6px 12px;
+  border-radius:50px;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:12px;
+  width:fit-content;
+  text-transform:uppercase;
+}
 
 /* MNC SECTOR DETAIL PAGE DESIGN */
-.sector-header{background:linear-gradient(rgba(11,31,58,0.85),rgba(11,31,58,0.92)),url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1600&q=80') center/cover;color:#fff;padding:80px 20px;text-align:center;border-radius:10px;margin-bottom:40px}
+.sector-header{background:linear-gradient(rgba(11,31,58,0.88),rgba(15,23,42,0.92)),url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1600&q=80') center/cover;color:#fff;padding:80px 20px;text-align:center;border-radius:12px;margin-bottom:40px}
 .sector-header h1{font-size:38px;margin-bottom:10px}
 .sector-header p{font-size:18px;color:#93c5fd}
 
 .mnc-grid{display:grid;grid-template-columns:2fr 1fr;gap:40px}
-.mnc-box{background:#fff;padding:35px;border-radius:10px;border:1px solid #e5e7eb;box-shadow:0 4px 15px rgba(0,0,0,0.04)}
+.mnc-box{background:#ffffff;padding:35px;border-radius:12px;border:1px solid #cbd5e1;box-shadow:0 6px 20px rgba(0,0,0,0.03)}
 .mnc-box h2{font-size:24px;color:#0b1f3a;margin-bottom:15px;border-left:4px solid #2563eb;padding-left:12px}
-.mnc-box p{color:#4b5563;font-size:16px;margin-bottom:20px;line-height:1.7}
+.mnc-box p{color:#475569;font-size:16px;margin-bottom:20px;line-height:1.7}
 .mnc-list{list-style:none;margin-bottom:25px}
-.mnc-list li{margin-bottom:10px;color:#374151;font-size:15px}
+.mnc-list li{margin-bottom:10px;color:#334155;font-size:15px}
 .mnc-list li::before{content:"✓ ";color:#2563eb;font-weight:bold}
 
-.sidebar-box{background:#0b1f3a;color:#fff;padding:30px;border-radius:10px;height:fit-content}
+.sidebar-box{background:#0b1f3a;color:#fff;padding:30px;border-radius:12px;height:fit-content}
 .sidebar-box h3{font-size:20px;margin-bottom:15px;color:#93c5fd}
 .sidebar-box p{color:#dbeafe;font-size:14px;margin-bottom:20px}
 
 /* MEDICINE & SYRUP SLIDER CAROUSEL */
 .syrup-section-title{font-size:20px;color:#0b1f3a;margin:25px 0 15px;font-weight:700}
-.syrup-slider-container{margin:15px 0 30px;overflow:hidden;border-radius:12px;border:1px solid #e5e7eb;background:#f8fafc;padding:20px}
+.syrup-slider-container{margin:15px 0 30px;overflow:hidden;border-radius:12px;border:1px solid #cbd5e1;background:#f8fafc;padding:20px}
 .syrup-slider{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:15px}
-.syrup-card{flex:0 0 260px;scroll-snap-align:start;background:#fff;border-radius:10px;border:1px solid #e5e7eb;padding:15px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.04);transition:0.3s}
+.syrup-card{flex:0 0 260px;scroll-snap-align:start;background:#ffffff;border-radius:10px;border:1px solid #e2e8f0;padding:15px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.03);transition:0.3s}
 .syrup-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.08);border-color:#2563eb}
 .syrup-card img{width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px}
 .syrup-card h4{font-size:16px;color:#0b1f3a;margin-bottom:6px;font-weight:700}
@@ -314,10 +374,10 @@ footer a{display:block;margin-bottom:8px}
 <div class="container">
 <div class="section-title"><h2>Why Choose AVERIN VENTURES</h2></div>
 <div class="features">
-<div class="feature"><div class="feature-icon">◆</div><h3>Professional Operations</h3><p>Systematic planning, efficient execution and responsible business operations.</p></div>
-<div class="feature"><div class="feature-icon">✓</div><h3>Quality & Reliability</h3><p>A strong focus on dependable service, quality execution and professional standards.</p></div>
-<div class="feature"><div class="feature-icon">◎</div><h3>Client-Focused Approach</h3><p>Understanding requirements and providing practical and reliable business solutions.</p></div>
-<div class="feature"><div class="feature-icon">↗</div><h3>Sustainable Growth</h3><p>Building long-term relationships and expanding responsibly across business sectors.</p></div>
+<div class="feature"><div class="feature-icon"><i class="fa-solid fa-layer-group"></i></div><h3>Professional Operations</h3><p>Systematic planning, efficient execution and responsible business operations.</p></div>
+<div class="feature"><div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div><h3>Quality & Reliability</h3><p>A strong focus on dependable service, quality execution and professional standards.</p></div>
+<div class="feature"><div class="feature-icon"><i class="fa-solid fa-user-check"></i></div><h3>Client-Focused Approach</h3><p>Understanding requirements and providing practical and reliable business solutions.</p></div>
+<div class="feature"><div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div><h3>Sustainable Growth</h3><p>Building long-term relationships and expanding responsibly across business sectors.</p></div>
 </div>
 </div>
 </section>
@@ -337,6 +397,7 @@ footer a{display:block;margin-bottom:8px}
 <div class="section-title"><h2>Contact Us</h2><p>Connect with AVERIN VENTURES PRIVATE LIMITED for business enquiries and opportunities.</p></div>
 <div class="contact-grid">
 
+<!-- CONTACT INFORMATION LEFT CARD -->
 <div class="contact-info">
 <h3>AVERIN VENTURES<br>PRIVATE LIMITED</h3>
 <p><strong>Tagline:</strong><br>For You. For Society.</p>
@@ -346,10 +407,21 @@ footer a{display:block;margin-bottom:8px}
 <a class="whatsapp" href="https://wa.me/917398753008?text=Hello%20AVERIN%20VENTURES%2C%20I%20would%20like%20to%20make%20a%20business%20enquiry." target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
 </div>
 
-<div class="gform-card">
-<h3>Business Enquiry Form</h3>
-<p>Please click the button below to fill out our official Google Form and submit your business requirements directly to us.</p>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLScf5ZAYPk2E4f8A8KJsEfj49w0QgO4C3xDHB5R4myZFgRv-BA/viewform?usp=header" target="_blank" class="btn btn-primary">Fill Enquiry Form</a>
+<!-- MNC STYLE HIGH-CONVERTING BUSINESS ENQUIRY CARD -->
+<div class="mnc-enquiry-card">
+  <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Business Consultation Desk" class="mnc-enquiry-img">
+  
+  <div class="mnc-enquiry-body">
+    <div>
+      <span class="mnc-badge"><i class="fa-solid fa-building"></i> Commercial Desk</span>
+      <h3>Business Partnership & RFQ Portal</h3>
+      <p>Submit your enterprise specifications, PCD pharma proposals, or project requirements directly to our executive management desk.</p>
+    </div>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScf5ZAYPk2E4f8A8KJsEfj49w0QgO4C3xDHB5R4myZFgRv-BA/viewform?usp=header" target="_blank" class="btn btn-primary" style="width:100%; text-align:center; padding: 14px 20px;">
+      Launch Business Enquiry Form <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left:6px;"></i>
+    </a>
+  </div>
 </div>
 
 </div>
@@ -372,7 +444,7 @@ footer a{display:block;margin-bottom:8px}
 <p>AVERIN PHARMACEUTICALS (A Division of Averin Ventures Private Limited) is committed to high-standard pharmaceutical franchise distribution, third-party manufacturing, and ethical pharmaceutical supply chain operations across India.</p>
 
 <h3 class="syrup-section-title">Syrup & Liquid Medicine Product Range</h3>
-<p style="color:#6b7280;font-size:14px;">High quality WHO-GMP certified liquid oral syrups and healthcare formulations. <i>(Future me aap in image URLs ko apni company ke asli syrup photos se badal sakte hain).</i></p>
+<p style="color:#64748b;font-size:14px;">High quality WHO-GMP certified liquid oral syrups and healthcare formulations.</p>
 
 <!-- PROFESSIONAL SYRUP SLIDER CAROUSEL -->
 <div class="syrup-slider-container">
