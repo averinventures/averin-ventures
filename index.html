@@ -2,1221 +2,648 @@
 <html lang="en">
 <head>
   <meta name="google-site-verification" content="lGhGd2EZW5qMOWC_JAVKwKi5grlxqH82_09WrEpLRak" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AVERIN VENTURES PRIVATE LIMITED | For You. For Society.</title>
-
-<meta name="description" content="AVERIN VENTURES PRIVATE LIMITED - A diversified Indian business enterprise focused on trading, logistics, manpower, infrastructure, hospitality, manufacturing, consultancy and digital business solutions.">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-color:#1f2937;
-background:#fff;
-line-height:1.6
-}
-
-a{text-decoration:none}
-
-header{
-position:sticky;
-top:0;
-z-index:1000;
-background:#fff;
-border-bottom:1px solid #e5e7eb;
-box-shadow:0 2px 12px rgba(0,0,0,.06)
-}
-
-.navbar{
-max-width:1200px;
-margin:auto;
-padding:12px 25px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:20px
-}
-
-.brand{
-display:flex;
-align-items:center;
-gap:12px;
-color:#0b1f3a
-}
-
-.brand-logo{
-width:58px;
-height:58px;
-object-fit:contain;
-display:block
-}
-
-.brand-text{
-display:flex;
-flex-direction:column;
-line-height:1.15
-}
-
-.brand-name{
-font-size:20px;
-font-weight:800;
-letter-spacing:.5px;
-color:#0b1f3a
-}
-
-.brand-subtitle{
-font-size:11px;
-color:#2563eb;
-letter-spacing:2px;
-font-weight:700;
-margin-top:4px
-}
-
-nav{
-display:flex;
-gap:25px;
-align-items:center
-}
-
-nav a{
-color:#1f2937;
-font-weight:600;
-font-size:15px;
-transition:.3s
-}
-
-nav a:hover{color:#2563eb}
-
-/* HERO */
-
-.hero{
-min-height:650px;
-display:flex;
-align-items:center;
-text-align:center;
-color:#fff;
-background:
-linear-gradient(rgba(5,25,55,.90),rgba(8,50,95,.90)),
-url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80")
-center/cover
-}
-
-.hero-content{
-max-width:900px;
-margin:auto;
-padding:80px 25px
-}
-
-.hero-logo{
-width:120px;
-height:120px;
-object-fit:contain;
-margin-bottom:25px;
-background:#fff;
-padding:10px;
-border-radius:15px;
-box-shadow:0 10px 35px rgba(0,0,0,.25)
-}
-
-.hero h1{
-font-size:48px;
-line-height:1.15;
-margin-bottom:18px;
-letter-spacing:1px
-}
-
-.tagline{
-font-size:25px;
-font-weight:600;
-color:#dbeafe;
-margin-bottom:25px
-}
-
-.hero p{
-font-size:18px;
-max-width:760px;
-margin:auto;
-color:#e5e7eb
-}
-
-.buttons{
-margin-top:35px;
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap
-}
-
-.btn{
-display:inline-block;
-padding:13px 26px;
-border-radius:6px;
-font-weight:700;
-transition:.3s
-}
-
-.btn-primary{
-background:#2563eb;
-color:#fff
-}
-
-.btn-primary:hover{
-background:#1d4ed8;
-transform:translateY(-2px)
-}
-
-.btn-light{
-background:#fff;
-color:#0b1f3a
-}
-
-.btn-light:hover{
-background:#e5e7eb;
-transform:translateY(-2px)
-}
-
-section{padding:80px 20px}
-
-.container{
-max-width:1150px;
-margin:auto
-}
-
-.section-title{
-text-align:center;
-margin-bottom:45px
-}
-
-.section-title h2{
-font-size:34px;
-color:#0b1f3a;
-margin-bottom:12px
-}
-
-.section-title p{
-max-width:750px;
-margin:auto;
-color:#6b7280
-}
-
-/* ABOUT */
-
-.about{background:#f8fafc}
-
-.about-box{
-max-width:900px;
-margin:auto;
-text-align:center
-}
-
-.about-box h3{
-font-size:28px;
-color:#2563eb;
-margin-bottom:20px
-}
-
-.about-box p{
-color:#4b5563;
-font-size:17px
-}
-
-/* SERVICES */
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px
-}
-
-.service-card{
-padding:30px 25px;
-background:#fff;
-border:1px solid #e5e7eb;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,.05);
-transition:.3s
-}
-
-.service-card:hover{
-transform:translateY(-5px);
-box-shadow:0 12px 28px rgba(0,0,0,.10)
-}
-
-.service-number{
-font-size:14px;
-color:#2563eb;
-font-weight:bold;
-margin-bottom:10px
-}
-
-.service-card h3{
-color:#0b1f3a;
-font-size:20px;
-margin-bottom:12px
-}
-
-.service-card p{
-color:#6b7280;
-font-size:15px
-}
-
-/* WHY */
-
-.why{background:#f8fafc}
-
-.features{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px
-}
-
-.feature{
-background:#fff;
-padding:30px 20px;
-text-align:center;
-border-radius:10px;
-border:1px solid #e5e7eb
-}
-
-.feature-icon{
-font-size:32px;
-margin-bottom:15px
-}
-
-.feature h3{
-color:#0b1f3a;
-margin-bottom:10px
-}
-
-.feature p{
-color:#6b7280;
-font-size:14px
-}
-
-/* VISION */
-
-.vision-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px
-}
-
-.vision-card{
-padding:35px;
-border-radius:10px;
-background:#f8fafc;
-border-left:5px solid #2563eb
-}
-
-.vision-card h3{
-color:#0b1f3a;
-margin-bottom:12px;
-font-size:25px
-}
-
-.vision-card p{color:#6b7280}
-
-/* VALUES */
-
-.values{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:15px
-}
-
-.value{
-text-align:center;
-padding:25px 15px;
-border:1px solid #e5e7eb;
-border-radius:8px;
-background:#fff
-}
-
-.value h3{
-color:#2563eb;
-font-size:17px
-}
-
-/* SOCIETY */
-
-.society{
-background:#0b1f3a;
-color:#fff;
-text-align:center
-}
-
-.society h2{
-font-size:38px;
-margin-bottom:15px
-}
-
-.tagline-large{
-font-size:24px;
-color:#93c5fd;
-font-weight:bold;
-margin-bottom:25px
-}
-
-.society p{
-max-width:850px;
-margin:auto;
-color:#dbeafe;
-font-size:17px
-}
-
-/* CONTACT */
-
-.contact{background:#f8fafc}
-
-.contact-grid{
-display:grid;
-grid-template-columns:1fr 1.2fr;
-gap:40px
-}
-
-.contact-info{
-background:#0b1f3a;
-color:#fff;
-padding:40px;
-border-radius:10px
-}
-
-.contact-info h3{
-font-size:26px;
-margin-bottom:20px
-}
-
-.contact-info p{
-margin-bottom:15px;
-color:#dbeafe
-}
-
-.contact-info a{color:#93c5fd}
-
-.whatsapp{
-display:inline-block;
-margin-top:15px;
-padding:12px 22px;
-background:#25D366;
-color:#fff!important;
-border-radius:6px;
-font-weight:bold
-}
-
-.contact-form{
-background:#fff;
-padding:35px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,.06)
-}
-
-.form-group{margin-bottom:18px}
-
-.form-group label{
-display:block;
-font-weight:600;
-margin-bottom:6px
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select{
-width:100%;
-padding:12px;
-border:1px solid #d1d5db;
-border-radius:5px;
-font-size:15px
-}
-
-.form-group textarea{
-min-height:130px;
-resize:vertical
-}
-
-.submit-btn{
-width:100%;
-padding:14px;
-border:none;
-border-radius:5px;
-background:#2563eb;
-color:#fff;
-font-size:16px;
-font-weight:bold;
-cursor:pointer
-}
-
-.submit-btn:hover{background:#1d4ed8}
-
-/* FOOTER */
-
-footer{
-background:#061426;
-color:#fff;
-padding:45px 20px 20px
-}
-
-.footer-grid{
-max-width:1150px;
-margin:auto;
-display:grid;
-grid-template-columns:2fr 1fr 1fr;
-gap:40px
-}
-
-footer h3{margin-bottom:15px}
-
-footer p,
-footer a{
-color:#cbd5e1;
-font-size:14px
-}
-
-footer a{
-display:block;
-margin-bottom:8px
-}
-
-.footer-bottom{
-max-width:1150px;
-margin:35px auto 0;
-padding-top:20px;
-border-top:1px solid #1e293b;
-text-align:center;
-color:#94a3b8;
-font-size:13px
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-.services-grid{grid-template-columns:repeat(2,1fr)}
-
-.features{grid-template-columns:repeat(2,1fr)}
-
-.values{grid-template-columns:repeat(2,1fr)}
-
-.footer-grid{grid-template-columns:1fr 1fr}
-}
-
-@media(max-width:650px){
-
-.navbar{
-flex-direction:column;
-gap:12px;
-padding:12px 15px
-}
-
-.brand-logo{
-width:50px;
-height:50px
-}
-
-.brand-name{font-size:17px}
-
-.brand-subtitle{font-size:9px}
-
-nav{
-gap:12px;
-flex-wrap:wrap;
-justify-content:center
-}
-
-nav a{font-size:13px}
-
-.hero{min-height:600px}
-
-.hero-logo{
-width:90px;
-height:90px
-}
-
-.hero h1{font-size:34px}
-
-.tagline{font-size:20px}
-
-.hero p{font-size:16px}
-
-section{padding:60px 18px}
-
-.section-title h2{font-size:28px}
-
-.services-grid,
-.features,
-.values,
-.vision-grid,
-.contact-grid,
-.footer-grid{
-grid-template-columns:1fr
-}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVERIN VENTURES PRIVATE LIMITED | Global Conglomerate & Business Solutions</title>
+  <meta name="description" content="AVERIN VENTURES PRIVATE LIMITED - A diversified Indian MNC business enterprise across Trading, Logistics, Infrastructure, Staffing, Manufacturing, Technology, and Consultancy.">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { color: #1e293b; background: #f8fafc; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER & NAVBAR */
+    header { position: sticky; top: 0; z-index: 1000; background: #ffffff; border-bottom: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .navbar { max-width: 1280px; margin: auto; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+    .brand-logo { width: 50px; height: 50px; object-fit: contain; }
+    .brand-name { font-size: 20px; font-weight: 800; color: #0f172a; letter-spacing: 0.5px; }
+    .brand-subtitle { font-size: 10px; color: #2563eb; letter-spacing: 2px; font-weight: 700; margin-top: 2px; }
+    
+    nav { display: flex; gap: 20px; align-items: center; }
+    nav a { color: #334155; font-weight: 600; font-size: 14px; transition: 0.3s; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; }
+    nav a:hover, nav a.active { color: #2563eb; }
+
+    /* PAGE ROUTING VISIBILITY */
+    .page { display: none; min-height: 80vh; padding-bottom: 60px; }
+    .page.active { display: block; animation: fadeIn 0.4s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* HERO SECTION */
+    .hero { min-height: 520px; display: flex; align-items: center; text-align: center; color: #fff; background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.92)), url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80") center/cover; }
+    .hero-content { max-width: 900px; margin: auto; padding: 60px 20px; }
+    .hero h1 { font-size: 44px; font-weight: 800; margin-bottom: 15px; letter-spacing: 1px; line-height: 1.2; }
+    .hero .tagline { font-size: 22px; color: #93c5fd; font-weight: 600; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1.5px; }
+    .hero p { font-size: 17px; max-width: 750px; margin: auto; color: #cbd5e1; }
+    .btn-group { margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 12px 28px; border-radius: 6px; font-weight: 700; font-size: 15px; transition: 0.3s; cursor: pointer; border: none; }
+    .btn-primary { background: #2563eb; color: #fff; }
+    .btn-primary:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(37,99,235,0.4); }
+    .btn-light { background: #ffffff; color: #0f172a; }
+    .btn-light:hover { background: #e2e8f0; transform: translateY(-2px); }
+
+    /* CONTAINER & TITLES */
+    .container { max-width: 1200px; margin: auto; padding: 50px 20px; }
+    .section-title { text-align: center; margin-bottom: 45px; }
+    .section-title h2 { font-size: 32px; color: #0f172a; margin-bottom: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .section-title p { max-width: 700px; margin: auto; color: #64748b; font-size: 16px; }
+
+    /* SERVICES GRID (HOME PAGE) */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+    .service-card { background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #e2e8f0; transition: 0.3s; display: flex; flex-direction: column; }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
+    .service-card img { width: 100%; height: 200px; object-fit: cover; }
+    .service-card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+    .service-card h3 { color: #0f172a; font-size: 20px; margin-bottom: 10px; }
+    .service-card p { color: #64748b; font-size: 14px; margin-bottom: 20px; flex-grow: 1; }
+
+    /* SERVICE DETAIL PAGE STYLING (MNC STYLE) */
+    .service-hero { background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), var(--bg-img) center/cover; color: white; padding: 80px 20px; text-align: center; border-radius: 12px; margin-bottom: 40px; }
+    .service-hero h1 { font-size: 38px; margin-bottom: 10px; }
+    .service-hero p { font-size: 18px; color: #93c5fd; max-width: 800px; margin: auto; }
+    
+    .mnc-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+    .mnc-content h2 { font-size: 26px; color: #0f172a; margin: 25px 0 15px; border-left: 4px solid #2563eb; padding-left: 12px; }
+    .mnc-content p { color: #475569; font-size: 16px; margin-bottom: 15px; }
+    .mnc-list { list-style: none; margin: 20px 0; }
+    .mnc-list li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; color: #334155; }
+    .mnc-list li i { color: #2563eb; margin-top: 4px; }
+
+    .mnc-sidebar { background: #fff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; height: fit-content; }
+    .mnc-sidebar h3 { font-size: 20px; margin-bottom: 20px; color: #0f172a; border-bottom: 2px solid #2563eb; padding-bottom: 8px; }
+
+    /* CONTACT SECTION */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; }
+    .contact-info { background: #0f172a; color: #fff; padding: 40px; border-radius: 10px; }
+    .contact-info h3 { font-size: 24px; margin-bottom: 20px; color: #93c5fd; }
+    .contact-info p { margin-bottom: 18px; color: #cbd5e1; font-size: 15px; }
+    .contact-info i { width: 25px; color: #38bdf8; }
+    
+    .gform-card { background: #fff; padding: 40px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+    .gform-card h3 { font-size: 24px; color: #0f172a; margin-bottom: 15px; }
+    .gform-card p { color: #64748b; margin-bottom: 25px; font-size: 15px; }
+
+    /* FOOTER */
+    footer { background: #070d19; color: #94a3b8; padding: 50px 20px 20px; margin-top: 60px; }
+    .footer-grid { max-width: 1200px; margin: auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+    footer h3 { color: #fff; margin-bottom: 20px; font-size: 18px; }
+    footer a { display: block; margin-bottom: 10px; color: #94a3b8; font-size: 14px; transition: 0.3s; }
+    footer a:hover { color: #38bdf8; }
+    .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 20px; border-top: 1px solid #1e293b; text-align: center; font-size: 13px; }
+
+    /* RESPONSIVE */
+    @media(max-width: 900px){
+      .mnc-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 32px; }
+      nav { display: flex; flex-wrap: wrap; gap: 10px; }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- HEADER -->
-
-<header>
-<div class="navbar">
-
-<a href="#home" class="brand">
-
-<img src="logo.png"
-alt="AVERIN VENTURES PRIVATE LIMITED Logo"
-class="brand-logo">
-
-<div class="brand-text">
-
-<div class="brand-name">
-AVERIN VENTURES
-</div>
-
-<div class="brand-subtitle">
-PRIVATE LIMITED
-</div>
-
-</div>
-
-</a>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About Us</a>
-<a href="#services">Services</a>
-<a href="#values">Values</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</div>
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<img src="logo.png"
-alt="AVERIN VENTURES PRIVATE LIMITED"
-class="hero-logo">
-
-<h1>
-AVERIN VENTURES<br>
-PRIVATE LIMITED
-</h1>
-
-<div class="tagline">
-For You. For Society.
-</div>
-
-<p>
-A professionally managed and growth-oriented business enterprise
-engaged in diverse commercial, operational and business support
-activities across multiple sectors.
-</p>
-
-<div class="buttons">
-
-<a href="#services" class="btn btn-primary">
-Explore Our Services
-</a>
-
-<a href="#contact" class="btn btn-light">
-Contact Us
-</a>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-<div class="container">
-
-<div class="section-title">
-<h2>About Us</h2>
-
-<p>
-Building a professional, reliable and sustainable business platform.
-</p>
-</div>
-
-<div class="about-box">
-
-<h3>
-Building Opportunities. Creating Value.
-</h3>
-
-<p>
-AVERIN VENTURES PRIVATE LIMITED aims to build a diversified
-and sustainable business platform by delivering reliable
-products, services and operational solutions.
-</p>
-
-<br>
-
-<p>
-Our approach is based on professionalism, responsible
-operations, quality execution and long-term business
-relationships.
-</p>
-
-<br>
-
-<p>
-We aim to create value not only for our clients and business
-partners, but also through responsible participation in
-society and economic development.
-</p>
-
-</div>
-</div>
-</section>
-
-
-<!-- SERVICES -->
-
-<section id="services">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Our Business Areas</h2>
-
-<p>
-Diverse business capabilities designed to support clients,
-partners and operational requirements.
-</p>
-
-</div>
-
-<div class="services-grid">
-
-<div class="service-card">
-<div class="service-number">01</div>
-<h3>Trading & Distribution</h3>
-<p>
-Procurement, sourcing, wholesale, retail, distribution
-and supply of lawful products and materials.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-number">02</div>
-<h3>Transport & Logistics</h3>
-<p>
-Transportation, logistics, delivery, fleet coordination,
-warehousing and supply-chain support.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-number">03</div>
-<h3>Manpower & Staffing</h3>
-<p>
-Manpower supply, staffing, recruitment, workforce
-management and operational support services.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-number">04</div>
-<h3>Construction & Infrastructure</h3>
-<p>
-Construction, civil works, project execution,
-maintenance and infrastructure-related services.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-number">05</div>
-<h3>Hospitality & Tourism</h3>
-<p>
-Hotel, resort, restaurant, guest-house, hospitality
-management and allied services.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-number">06</div>
-<h3>Manufacturing & Processing</h3>
-<p>
-Manufacturing, processing, fabrication, assembly
-and packaging activities.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-number">07</div>
-<h3>Agriculture & Food Processing</h3>
-<p>
-Agricultural, agro-based, food-processing and allied
-commercial activities.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-number">08</div>
-<h3>Consultancy & Business Services</h3>
-<p>
-Business, management, operational, project and
-commercial consultancy services.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-number">09</div>
-<h3>IT & Digital Services</h3>
-<p>
-Websites, software, digital platforms, automation
-and technology-enabled business solutions.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-number">10</div>
-<h3>Import & Export</h3>
-<p>
-International sourcing, procurement, trading,
-distribution and other lawful cross-border
-business activities.
-</p>
-</div>
-
-</div>
-
-<div style="text-align:center;margin-top:40px">
-
-<a href="#contact" class="btn btn-primary">
-Make an Enquiry
-</a>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- WHY CHOOSE US -->
-
-<section class="why">
-
-<div class="container">
-
-<div class="section-title">
-<h2>Why Choose AVERIN VENTURES</h2>
-</div>
-
-<div class="features">
-
-<div class="feature">
-<div class="feature-icon">◆</div>
-<h3>Professional Operations</h3>
-<p>
-Systematic planning, efficient execution and responsible
-business operations.
-</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">✓</div>
-<h3>Quality & Reliability</h3>
-<p>
-A strong focus on dependable service, quality execution
-and professional standards.
-</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">◎</div>
-<h3>Client-Focused Approach</h3>
-<p>
-Understanding requirements and providing practical and
-reliable business solutions.
-</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">↗</div>
-<h3>Sustainable Growth</h3>
-<p>
-Building long-term relationships and expanding
-responsibly across business sectors.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- VISION & MISSION -->
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-<h2>Our Vision & Mission</h2>
-</div>
-
-<div class="vision-grid">
-
-<div class="vision-card">
-
-<h3>Our Vision</h3>
-
-<p>
-To build a professionally managed and diversified
-enterprise that creates sustainable value for customers,
-business partners, employees and society.
-</p>
-
-</div>
-
-<div class="vision-card">
-
-<h3>Our Mission</h3>
-
-<p>
-To deliver reliable services and business solutions
-through professional management, efficient operations,
-quality execution, innovation and responsible business
-practices.
-</p>
-
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- VALUES -->
-
-<section id="values" class="about">
-
-<div class="container">
-
-<div class="section-title">
-<h2>Our Values</h2>
-</div>
-
-<div class="values">
-
-<div class="value"><h3>Integrity</h3></div>
-
-<div class="value"><h3>Professionalism</h3></div>
-
-<div class="value"><h3>Reliability</h3></div>
-
-<div class="value"><h3>Innovation</h3></div>
-
-<div class="value"><h3>Responsibility</h3></div>
-
-</div>
-</div>
-</section>
-
-
-<!-- SOCIETY -->
-
-<section class="society">
-
-<div class="container">
-
-<h2>For You. For Society.</h2>
-
-<div class="tagline-large">
-Business Growth With Responsibility
-</div>
-
-<p>
-We believe that sustainable business growth goes hand in hand
-with creating opportunities and contributing positively to society.
-</p>
-
-<br>
-
-<p>
-Our long-term vision is to build business operations that generate
-value for customers, create employment and partnership opportunities,
-support economic activity and contribute responsibly to the
-communities in which we operate.
-</p>
-
-</div>
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Contact Us</h2>
-
-<p>
-Connect with AVERIN VENTURES PRIVATE LIMITED for business
-enquiries and opportunities.
-</p>
-
-</div>
-
-<div class="contact-grid">
-
-
-<!-- CONTACT INFORMATION -->
-
-<div class="contact-info">
-
-<h3>
-AVERIN VENTURES<br>
-PRIVATE LIMITED
-</h3>
-
-<p>
-<strong>Tagline:</strong><br>
-For You. For Society.
-</p>
-
-<p>
-<strong>WhatsApp / Phone:</strong><br>
-
-<a href="tel:+917398753008">
-+91 7398753008
-</a>
-
-</p>
-
-<p>
-<strong>Registered Office:</strong><br>
-
-11/70 Shahid Path Behsa,<br>
-Lucknow, Uttar Pradesh - 226023,<br>
-India
-</p>
-
-<a
-class="whatsapp"
-href="https://wa.me/917398753008?text=Hello%20AVERIN%20VENTURES%2C%20I%20would%20like%20to%20make%20a%20business%20enquiry."
-target="_blank">
-
-WhatsApp Us
-
-</a>
-
-</div>
-
-
-<!-- ENQUIRY FORM -->
-
-<div class="contact-form">
-
-<form
-action="https://formspree.io/f/YOUR_FORM_ID"
-method="POST">
-
-<div class="form-group">
-
-<label>Full Name</label>
-
-<input
-type="text"
-name="name"
-placeholder="Enter your full name"
-required>
-
-</div>
-
-
-<div class="form-group">
-
-<label>Company / Organization</label>
-
-<input
-type="text"
-name="company"
-placeholder="Company or organization name">
-
-</div>
-
-
-<div class="form-group">
-
-<label>Phone Number</label>
-
-<input
-type="tel"
-name="phone"
-placeholder="Enter phone number"
-required>
-
-</div>
-
-
-<div class="form-group">
-
-<label>Email Address</label>
-
-<input
-type="email"
-name="email"
-placeholder="Enter email address"
-required>
-
-</div>
-
-
-<div class="form-group">
-
-<label>Business Requirement</label>
-
-<select name="requirement" required>
-
-<option value="">
-Select a business area
-</option>
-
-<option>Trading & Distribution</option>
-<option>Transport & Logistics</option>
-<option>Manpower & Staffing</option>
-<option>Construction & Infrastructure</option>
-<option>Hospitality & Tourism</option>
-<option>Manufacturing & Processing</option>
-<option>Agriculture & Food Processing</option>
-<option>Consultancy & Business Services</option>
-<option>IT & Digital Services</option>
-<option>Import & Export</option>
-<option>Other</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>Message</label>
-
-<textarea
-name="message"
-placeholder="Tell us about your requirement"
-required></textarea>
-
-</div>
-
-
-<input
-type="hidden"
-name="_subject"
-value="New Business Enquiry - AVERIN VENTURES PRIVATE LIMITED">
-
-
-<button
-type="submit"
-class="submit-btn">
-
-Submit Business Enquiry
-
-</button>
-
-</form>
-
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="footer-grid">
-
-<div>
-
-<h3>
-AVERIN VENTURES PRIVATE LIMITED
-</h3>
-
-<p>
-For You. For Society.
-</p>
-
-<br>
-
-<p>
-A diversified business enterprise focused on professional
-operations, reliable services and sustainable growth.
-</p>
-
-</div>
-
-
-<div>
-
-<h3>Quick Links</h3>
-
-<a href="#home">Home</a>
-<a href="#about">About Us</a>
-<a href="#services">Our Services</a>
-<a href="#values">Our Values</a>
-<a href="#contact">Contact Us</a>
-
-</div>
-
-
-<div>
-
-<h3>Contact</h3>
-
-<a href="tel:+917398753008">
-+91 7398753008
-</a>
-
-<a href="https://wa.me/917398753008" target="_blank">
-WhatsApp
-</a>
-
-</div>
-
-</div>
-
-
-<div class="footer-bottom">
-
-<p>
-AVERIN VENTURES PRIVATE LIMITED shall undertake business
-activities subject to applicable laws, licences, registrations,
-approvals, permits and statutory requirements.
-</p>
-
-<br>
-
-<p>
-© 2026 AVERIN VENTURES PRIVATE LIMITED.
-All Rights Reserved.
-</p>
-
-</div>
-
-</footer>
-
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
+      <div class="brand" onclick="showPage('home')">
+        <img src="logo.png" alt="AVERIN VENTURES Logo" class="brand-logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
+        <div>
+          <div class="brand-name">AVERIN VENTURES</div>
+          <div class="brand-subtitle">PRIVATE LIMITED</div>
+        </div>
+      </div>
+      <nav>
+        <a onclick="showPage('home')" id="nav-home" class="active">Home</a>
+        <a onclick="showPage('about')" id="nav-about">About Us</a>
+        <a onclick="showPage('services')" id="nav-services">Business Sectors</a>
+        <a onclick="showPage('contact')" id="nav-contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HOME PAGE -->
+  <div id="page-home" class="page active">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>AVERIN VENTURES PRIVATE LIMITED</h1>
+        <div class="tagline">For You. For Society.</div>
+        <p>A global corporate enterprise delivering multi-sector operational excellence, strategic commercial solutions, and sustainable infrastructure desarrollo across international markets.</p>
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="showPage('services')">Explore Business Units</button>
+          <button class="btn btn-light" onclick="showPage('contact')">Connect With Us</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="section-title">
+        <h2>Strategic Business Operations</h2>
+        <p>Delivering enterprise-grade solutions with global standards across diversified economic sectors.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- 1. Trading & Distribution -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Trading & Distribution">
+          <div class="service-card-body">
+            <h3>Trading & Distribution</h3>
+            <p>End-to-end global supply chain, bulk procurement, and strategic distribution network management.</p>
+            <button class="btn btn-primary" onclick="showPage('trading')">Read More</button>
+          </div>
+        </div>
+
+        <!-- 2. Transport & Logistics -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=600&q=80" alt="Logistics">
+          <div class="service-card-body">
+            <h3>Transport & Logistics</h3>
+            <p>Integrated fleet management, freight forwarding, cold-chain solutions, and smart warehousing.</p>
+            <button class="btn btn-primary" onclick="showPage('logistics')">Read More</button>
+          </div>
+        </div>
+
+        <!-- 3. Manpower & Staffing -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80" alt="Manpower">
+          <div class="service-card-body">
+            <h3>Manpower & Staffing</h3>
+            <p>Executive recruitment, specialized workforce deployment, and large-scale operational HR support.</p>
+            <button class="btn btn-primary" onclick="showPage('manpower')">Read More</button>
+          </div>
+        </div>
+
+        <!-- 4. Construction & Infrastructure -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=600&q=80" alt="Construction">
+          <div class="service-card-body">
+            <h3>Construction & Infrastructure</h3>
+            <p>Civil engineering, turnkey structural developments, smart infrastructure, and urban projects.</p>
+            <button class="btn btn-primary" onclick="showPage('construction')">Read More</button>
+          </div>
+        </div>
+
+        <!-- 5. Hospitality & Tourism -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Hospitality">
+          <div class="service-card-body">
+            <h3>Hospitality & Tourism</h3>
+            <p>Luxury resort management, corporate hospitality operations, eco-tourism, and guest relations.</p>
+            <button class="btn btn-primary" onclick="showPage('hospitality')">Read More</button>
+          </div>
+        </div>
+
+        <!-- 6. Manufacturing & Processing -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Manufacturing">
+          <div class="service-card-body">
+            <h3>Manufacturing & Processing</h3>
+            <p>Industrial fabrication, automated assembly processes, precision engineering, and packaging.</p>
+            <button class="btn btn-primary" onclick="showPage('manufacturing')">Read More</button>
+          </div>
+        </div>
+
+        <!-- 7. Agriculture & Food Processing -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80" alt="Agriculture">
+          <div class="service-card-body">
+            <h3>Agriculture & Food Processing</h3>
+            <p>Sustainable agro-tech innovations, commercial food processing, organic farming, and supply chain.</p>
+            <button class="btn btn-primary" onclick="showPage('agriculture')">Read More</button>
+          </div>
+        </div>
+
+        <!-- 8. Consultancy & Business Services -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Consultancy">
+          <div class="service-card-body">
+            <h3>Consultancy & Business Services</h3>
+            <p>Strategic corporate advisory, financial risk management, legal compliance, and operations scale-up.</p>
+            <button class="btn btn-primary" onclick="showPage('consultancy')">Read More</button>
+          </div>
+        </div>
+
+        <!-- 9. IT & Digital Services -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="IT Services">
+          <div class="service-card-body">
+            <h3>IT & Digital Services</h3>
+            <p>Enterprise software engineering, AI-driven digital transformation, cloud architecture, and cybersecurity.</p>
+            <button class="btn btn-primary" onclick="showPage('it-services')">Read More</button>
+          </div>
+        </div>
+
+        <!-- 10. Import & Export -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" alt="Import Export">
+          <div class="service-card-body">
+            <h3>Import & Export</h3>
+            <p>Cross-border commercial trade, international compliance, global sourcing, and custom clearance.</p>
+            <button class="btn btn-primary" onclick="showPage('import-export')">Read More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT US PAGE -->
+  <div id="page-about" class="page">
+    <div class="container">
+      <div class="section-title">
+        <h2>About AVERIN VENTURES</h2>
+        <p>A Visionary Enterprise Dedicated to Global Standards and Sustainable Impact.</p>
+      </div>
+      <div style="background: #fff; padding: 40px; border-radius: 12px; border: 1px solid #e2e8f0;">
+        <h3 style="font-size: 24px; color: #2563eb; margin-bottom: 20px;">Corporate Profile</h3>
+        <p style="font-size: 16px; color: #475569; margin-bottom: 20px;">
+          AVERIN VENTURES PRIVATE LIMITED is a premier Indian multi-industry enterprise structured around international corporate benchmarks. Operating across key commercial hubs, the company leads transformation across logistics, energy, staffing, infrastructure, digital technology, and international trade.
+        </p>
+        <p style="font-size: 16px; color: #475569; margin-bottom: 20px;">
+          Our core philosophy, <strong>"For You. For Society."</strong>, reinforces our dual commitment: driving high corporate performance for clients while actively facilitating socioeconomic empowerment, job creation, and sustainable development.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALL BUSINESS SECTORS PAGE -->
+  <div id="page-services" class="page">
+    <div class="container">
+      <div class="section-title">
+        <h2>All Business Sectors</h2>
+        <p>Click on any sector below to view detailed MNC corporate operations.</p>
+      </div>
+      <div style="text-align: center; margin-bottom: 30px;">
+        <button class="btn btn-primary" onclick="showPage('home')">Return to Home Grid View</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTOR 1: TRADING & DISTRIBUTION PAGE -->
+  <div id="page-trading" class="page">
+    <div class="container">
+      <div class="service-hero" style="--bg-img: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1800&q=80')">
+        <h1>Trading & Global Distribution</h1>
+        <p>Enterprise Wholesale, Bulk Commodity Sourcing, and B2B Supply Chain Networks</p>
+      </div>
+      <div class="mnc-grid">
+        <div class="mnc-content">
+          <h2>MNC Operational Framework</h2>
+          <p>AVERIN VENTURES handles large-scale B2B commercial distribution and bulk procurement for key raw materials, industrial supplies, and consumer goods. Our global trade networks link primary manufacturers directly to regional distributors.</p>
+          
+          <h2>Core Capabilities</h2>
+          <ul class="mnc-list">
+            <li><i class="fa-solid fa-circle-check"></i> Bulk procurement and quality certification management.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Real-time inventory track & trace systems for enterprise partners.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Compliance with international commerce and tariff frameworks.</li>
+          </ul>
+        </div>
+        <div class="mnc-sidebar">
+          <h3>Inquire Sector</h3>
+          <p>Need wholesale procurement or distribution support?</p>
+          <br>
+          <button class="btn btn-primary" style="width:100%" onclick="showPage('contact')">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTOR 2: TRANSPORT & LOGISTICS PAGE -->
+  <div id="page-logistics" class="page">
+    <div class="container">
+      <div class="service-hero" style="--bg-img: url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1800&q=80')">
+        <h1>Transport & Next-Gen Logistics</h1>
+        <p>Smart Fleet Logistics, Cold Chain Logistics, and Multimodal Freight Forwarding</p>
+      </div>
+      <div class="mnc-grid">
+        <div class="mnc-content">
+          <h2>MNC Logistics Infrastructure</h2>
+          <p>We operate end-to-end supply chain infrastructure leveraging automated fleet telematics, strategic warehousing hubs, and cross-border customs handling. Our solutions ensure minimal lead times and optimized operational efficiency.</p>
+          <h2>Key Deliverables</h2>
+          <ul class="mnc-list">
+            <li><i class="fa-solid fa-circle-check"></i> Multimodal transport solutions (Road, Rail, Sea & Air Freight).</li>
+            <li><i class="fa-solid fa-circle-check"></i> Temperature-controlled cold-chain management for sensitive perishables.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Grade-A smart warehousing with automated inventory management.</li>
+          </ul>
+        </div>
+        <div class="mnc-sidebar">
+          <h3>Inquire Sector</h3>
+          <p>Partner with our global logistics division.</p>
+          <br>
+          <button class="btn btn-primary" style="width:100%" onclick="showPage('contact')">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTOR 3: MANPOWER & STAFFING PAGE -->
+  <div id="page-manpower" class="page">
+    <div class="container">
+      <div class="service-hero" style="--bg-img: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=80')">
+        <h1>Manpower & Human Capital Solutions</h1>
+        <p>Strategic Workforce Deployment, Executive Search, and Industrial Staffing</p>
+      </div>
+      <div class="mnc-grid">
+        <div class="mnc-content">
+          <h2>Enterprise HR & Staffing Framework</h2>
+          <p>AVERIN VENTURES provides complete human resource lifecycle management, ranging from skilled technical staff recruitment to turnkey industrial workforce deployment for infrastructure and operational facilities.</p>
+          <h2>Key Deliverables</h2>
+          <ul class="mnc-list">
+            <li><i class="fa-solid fa-circle-check"></i> Industrial workforce supply with full statutory & safety compliance.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Corporate executive headhunting and technical skill sourcing.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Managed workforce solutions & payroll administration.</li>
+          </ul>
+        </div>
+        <div class="mnc-sidebar">
+          <h3>Inquire Sector</h3>
+          <p>Scale your workforce with certified talent.</p>
+          <br>
+          <button class="btn btn-primary" style="width:100%" onclick="showPage('contact')">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTOR 4: CONSTRUCTION & INFRASTRUCTURE PAGE -->
+  <div id="page-construction" class="page">
+    <div class="container">
+      <div class="service-hero" style="--bg-img: url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1800&q=80')">
+        <h1>Infrastructure & Civil Construction</h1>
+        <p>EPC Contracting, Urban Infrastructure Development, and Industrial Engineering</p>
+      </div>
+      <div class="mnc-grid">
+        <div class="mnc-content">
+          <h2>Civil Engineering & EPC Expertise</h2>
+          <p>Our infrastructure division specializes in complex civil engineering projects, commercial real estate developments, road networks, and maintenance contracts, backed by rigid ISO safety and quality protocols.</p>
+          <h2>Core Project Areas</h2>
+          <ul class="mnc-list">
+            <li><i class="fa-solid fa-circle-check"></i> Industrial facility design, structural erection, and commissioning.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Commercial complex construction & smart urban infrastructure.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Sustainable green-building certified engineering solutions.</li>
+          </ul>
+        </div>
+        <div class="mnc-sidebar">
+          <h3>Inquire Sector</h3>
+          <p>Discuss your infrastructure or EPC projects.</p>
+          <br>
+          <button class="btn btn-primary" style="width:100%" onclick="showPage('contact')">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTOR 5: HOSPITALITY & TOURISM PAGE -->
+  <div id="page-hospitality" class="page">
+    <div class="container">
+      <div class="service-hero" style="--bg-img: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=80')">
+        <h1>Hospitality & Tourism Management</h1>
+        <p>Luxury Resort Operations, Corporate Facility Management, and Experiential Tourism</p>
+      </div>
+      <div class="mnc-grid">
+        <div class="mnc-content">
+          <h2>World-Class Guest Management</h2>
+          <p>We deliver elite resort management, corporate stay solutions, and tourism infrastructure projects focused on premium customer experiences, operational excellence, and sustainable asset management.</p>
+          <h2>Capabilities</h2>
+          <ul class="mnc-list">
+            <li><i class="fa-solid fa-circle-check"></i> Full-service resort, hotel, and guest house operational handling.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Corporate catering, event management, and concierge services.</li>
+          </ul>
+        </div>
+        <div class="mnc-sidebar">
+          <h3>Inquire Sector</h3>
+          <p>Explore hospitality operational partnerships.</p>
+          <br>
+          <button class="btn btn-primary" style="width:100%" onclick="showPage('contact')">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTOR 6: MANUFACTURING & PROCESSING PAGE -->
+  <div id="page-manufacturing" class="page">
+    <div class="container">
+      <div class="service-hero" style="--bg-img: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1800&q=80')">
+        <h1>Advanced Manufacturing & Processing</h1>
+        <p>Precision Fabrication, OEM Assembly, and Industrial Material Packaging</p>
+      </div>
+      <div class="mnc-grid">
+        <div class="mnc-content">
+          <h2>Industrial Manufacturing Excellence</h2>
+          <p>Leveraging high-precision automated machinery and lean production principles, our manufacturing wing executes processing, custom fabrication, component assembly, and industrial-grade packaging.</p>
+          <h2>Capabilities</h2>
+          <ul class="mnc-list">
+            <li><i class="fa-solid fa-circle-check"></i> Automated component assembly lines and custom fabrication.</li>
+            <li><i class="fa-solid fa-circle-check"></i> ISO-certified quality assurance and safety compliance standards.</li>
+          </ul>
+        </div>
+        <div class="mnc-sidebar">
+          <h3>Inquire Sector</h3>
+          <p>Discuss custom OEM manufacturing contracts.</p>
+          <br>
+          <button class="btn btn-primary" style="width:100%" onclick="showPage('contact')">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTOR 7: AGRICULTURE & FOOD PROCESSING PAGE -->
+  <div id="page-agriculture" class="page">
+    <div class="container">
+      <div class="service-hero" style="--bg-img: url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1800&q=80')">
+        <h1>Agriculture & Agro-Processing</h1>
+        <p>Commercial Agro-Tech, Sustainable Farming, and Bulk Food Processing</p>
+      </div>
+      <div class="mnc-grid">
+        <div class="mnc-content">
+          <h2>Agro-Business Ecosystem</h2>
+          <p>We bridge modern agricultural practices with commercial food processing industries, promoting sustainable organic farming, crop value addition, cold storage preservation, and national distribution.</p>
+          <h2>Capabilities</h2>
+          <ul class="mnc-list">
+            <li><i class="fa-solid fa-circle-check"></i> Commercial food processing & hygienic packaging standards.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Direct farm-to-factory supply chain integration.</li>
+          </ul>
+        </div>
+        <div class="mnc-sidebar">
+          <h3>Inquire Sector</h3>
+          <p>Connect with our agro-processing unit.</p>
+          <br>
+          <button class="btn btn-primary" style="width:100%" onclick="showPage('contact')">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTOR 8: CONSULTANCY PAGE -->
+  <div id="page-consultancy" class="page">
+    <div class="container">
+      <div class="service-hero" style="--bg-img: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1800&q=80')">
+        <h1>Strategic Business & Management Consultancy</h1>
+        <p>Corporate Risk Management, Market Entry Strategy, and Operational Restructuring</p>
+      </div>
+      <div class="mnc-grid">
+        <div class="mnc-content">
+          <h2>Advisory Services</h2>
+          <p>Providing high-impact corporate consultancy for enterprises expanding into South Asia and global emerging markets. Our team specializes in regulatory compliance, asset management, and financial optimization.</p>
+          <h2>Capabilities</h2>
+          <ul class="mnc-list">
+            <li><i class="fa-solid fa-circle-check"></i> Market intelligence, feasibility analysis, and commercial strategy.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Statutory compliance, risk mitigation, and operational auditing.</li>
+          </ul>
+        </div>
+        <div class="mnc-sidebar">
+          <h3>Inquire Sector</h3>
+          <p>Book a strategic corporate consultation.</p>
+          <br>
+          <button class="btn btn-primary" style="width:100%" onclick="showPage('contact')">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTOR 9: IT & DIGITAL SERVICES PAGE -->
+  <div id="page-it-services" class="page">
+    <div class="container">
+      <div class="service-hero" style="--bg-img: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80')">
+        <h1>Enterprise IT & Digital Solutions</h1>
+        <p>AI Infrastructure, Enterprise Software Development, Cloud Architecture & Automation</p>
+      </div>
+      <div class="mnc-grid">
+        <div class="mnc-content">
+          <h2>Digital Transformation Engineering</h2>
+          <p>Developing scalable digital infrastructure, customized ERP enterprise systems, web portals, cybersecurity protocols, and business automation software tailored for high-growth corporations.</p>
+          <h2>Capabilities</h2>
+          <ul class="mnc-list">
+            <li><i class="fa-solid fa-circle-check"></i> Custom enterprise web application & mobile app development.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Cloud hosting infrastructure, cybersecurity & system integration.</li>
+          </ul>
+        </div>
+        <div class="mnc-sidebar">
+          <h3>Inquire Sector</h3>
+          <p>Initiate your digital transformation project.</p>
+          <br>
+          <button class="btn btn-primary" style="width:100%" onclick="showPage('contact')">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTOR 10: IMPORT & EXPORT PAGE -->
+  <div id="page-import-export" class="page">
+    <div class="container">
+      <div class="service-hero" style="--bg-img: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1800&q=80')">
+        <h1>Global Import & Export Operations</h1>
+        <p>Cross-Border Trade Compliance, Customs Brokerage, and Strategic Sourcing</p>
+      </div>
+      <div class="mnc-grid">
+        <div class="mnc-content">
+          <h2>International Commerce Division</h2>
+          <p>Managing complex cross-border trade transactions, customs clearance, international licensing, and cross-continent product logistics for global business trade requirements.</p>
+          <h2>Capabilities</h2>
+          <ul class="mnc-list">
+            <li><i class="fa-solid fa-circle-check"></i> End-to-end foreign trade compliance and tariff clearance.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Global vendor sourcing and international letter of credit handling.</li>
+          </ul>
+        </div>
+        <div class="mnc-sidebar">
+          <h3>Inquire Sector</h3>
+          <p>Partner with our export-import trade desk.</p>
+          <br>
+          <button class="btn btn-primary" style="width:100%" onclick="showPage('contact')">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT US PAGE -->
+  <div id="page-contact" class="page">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact Corporate Office</h2>
+        <p>Connect with our administrative desk for commercial partnerships, inquiries, or contracts.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>AVERIN VENTURES PRIVATE LIMITED</h3>
+          <p><i class="fa-solid fa-quote-left"></i> <strong>Tagline:</strong> For You. For Society.</p>
+          <p><i class="fa-solid fa-envelope"></i> <strong>Email Address:</strong><br><a href="mailto:averinvetures@gmail.com" style="color: #38bdf8;">averinvetures@gmail.com</a></p>
+          <p><i class="fa-solid fa-phone"></i> <strong>Phone / WhatsApp:</strong><br><a href="tel:+917398753008" style="color: #38bdf8;">+91 7398753008</a></p>
+          <p><i class="fa-solid fa-location-dot"></i> <strong>Registered Office:</strong><br>11/70 Shahid Path Behsa,<br>Lucknow, Uttar Pradesh - 226023, India</p>
+          
+          <a href="https://wa.me/917398753008?text=Hello%20AVERIN%20VENTURES%2C%20I%20would%20like%20to%20make%20a%20business%20enquiry." target="_blank" class="btn btn-primary" style="background:#25D366; border:none; margin-top:15px; display:inline-block;">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="gform-card">
+          <i class="fa-solid fa-file-signature" style="font-size: 45px; color: #2563eb; margin-bottom: 20px;"></i>
+          <h3>Official Business Enquiry Form</h3>
+          <p>Please submit your detailed project specifications via our official Google Business Form.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScf5ZAYPk2E4f8A8KJsEfj49w0QgO4C3xDHB5R4myZFgRv-BA/viewform?usp=header" target="_blank" class="btn btn-primary" style="padding: 15px 30px; font-size: 16px;">
+            Open Google Enquiry Form <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>AVERIN VENTURES PRIVATE LIMITED</h3>
+        <p>For You. For Society.</p>
+        <br>
+        <p>A multi-industry Indian enterprise dedicated to operational scale, sustainable value, and commercial excellence across global markets.</p>
+      </div>
+
+      <div>
+        <h3>Quick Navigation</h3>
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('about')">About Us</a>
+        <a onclick="showPage('services')">Business Sectors</a>
+        <a onclick="showPage('contact')">Contact Corporate</a>
+      </div>
+
+      <div>
+        <h3>Direct Contact</h3>
+        <a href="mailto:averinvetures@gmail.com"><i class="fa-solid fa-envelope"></i> averinvetures@gmail.com</a>
+        <a href="tel:+917398753008"><i class="fa-solid fa-phone"></i> +91 7398753008</a>
+        <a href="https://wa.me/917398753008" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Business</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>AVERIN VENTURES PRIVATE LIMITED operates in compliance with international and national statutory laws, registrations, and regulatory approvals.</p>
+      <br>
+      <p>© 2026 AVERIN VENTURES PRIVATE LIMITED. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- MULTI-PAGE ROUTING JAVASCRIPT -->
+  <script>
+    function showPage(pageId) {
+      // Hide all pages
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+
+      // Show selected page
+      const targetPage = document.getElementById('page-' + pageId);
+      if(targetPage) {
+        targetPage.classList.add('active');
+      } else {
+        document.getElementById('page-home').classList.add('active');
+      }
+
+      // Update Nav active links
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => link.classList.remove('active'));
+      const activeNav = document.getElementById('nav-' + pageId);
+      if(activeNav) activeNav.classList.add('active');
+
+      // Scroll to top smooth
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+  </script>
 </body>
 </html>
